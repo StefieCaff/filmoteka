@@ -27,6 +27,15 @@ p {
     box-sizing: inherit;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $primaryBackgroundColor;
+    color: $primaryText;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+}
+
 img {
     display: block;
     max-width: 100%;
