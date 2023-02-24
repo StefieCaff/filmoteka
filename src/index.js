@@ -5,4 +5,4 @@ import './js/genre-names';
 
 
 // on load api call trending movies by day
-window.addEventListener("load", fetchById);
+window.addEventListener("load", fetchTrending);
