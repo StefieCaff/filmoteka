@@ -4,7 +4,9 @@ and logs it to console */
 
 import tmdbTrending from "./tmdb-trending";
 
-export default async function fetchTrending() {
+
+
+export default async function getTrending() {
 
     const {data} = await tmdbTrending.get('trending/all/day')
     const movies = (data.results)

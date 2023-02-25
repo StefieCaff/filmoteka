@@ -6,8 +6,8 @@ li of movie */
 import tmdbById from "./tmdb-id";
 
 export default async function fetchById() {
-    const id = 1077280;
-    const movies = await tmdbById.get(`/movie/${id}`)
+    let id = 1077280;
+    const movies = await tmdbById.get(`movie/${id}`)
     
     console.log(movies);
     return movies;
