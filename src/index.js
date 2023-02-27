@@ -1,25 +1,34 @@
-//import './js/fetch-trending';
-import getTrending from './js/get-trending';
+
+import getMovies from './js/get-movies';
 import getById from './js/get-by-id';
-import getSearch from './js/get-search';
+import getMovieDetails from './js/get-movie-details';
 import './js/genre-names';
 
-const userInput = document.querySelector('input#search-query');
+//-------------DOM------------------
 const form = document.querySelector('form');
+const userInput = document.querySelector('input#search-query');
 
-// on load api call trending movies by day
-window.addEventListener("load", getTrending);
+//--------------API-----------------------
+const API_KEY = 'api_key=cc8aceddc1acb4be5d6024b16563f8b2';
+const BASE_URL = 'https://api.themoviedb.org/3';
+const API_TRENDING = BASE_URL + '/trending/all/day?' + API_KEY;
+const API_SEARCH = BASE_URL + '/search/movie/?' + API_KEY;
 
 
-const handleSubmit = e => {
+getMovies(API_TRENDING);
+
+// window.addEventListener("load", getMovies);
+
+
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let input = userInput.value.trim();
-    let response = '';
-    if (input.value === "") {
-        return;
-    };
-    console.log(input);
-    return response = getSearch(input);
-};
 
-form.addEventListener('submit', handleSubmit);
+    const input = userInput.value;
+    if (input) {
+        console.log(input)
+        getMovies(API_SEARCH + '&query=' + input);  
+    } else {
+        getMovies(API_TRENDING);
+    }
+    
+});
