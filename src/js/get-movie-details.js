@@ -3,13 +3,10 @@ and logs it to console  */
 
 /* this does not work yet*/
 
-import tmdbSearch from "./tmdb-search";
-
-export default async function getSearch() {
+export default async function getMovieDetails() {
  
   try {
-      const { data } = await tmdbSearch.get(`search/movie`);
-      const movies = (data.results);
+    
       console.log(movies);
   
         if (movies.length == 0) {
