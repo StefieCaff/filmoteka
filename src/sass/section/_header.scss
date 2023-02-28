@@ -1,0 +1,16 @@
+header {
+    margin: 45px 0 40px 0;
+    //background-image: url('photo@2x.png');
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__title {
+  display: none;
+}

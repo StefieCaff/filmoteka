@@ -14,10 +14,11 @@
     // }
 }
 
-.current-link {
-    color: $brightAccent;
+.navbar {
+  display: flex;
+  flex-direction: row;
 }
 
-svg {
-  background-color: #818181
+.navbar__item:first-child {
+  margin-right: 40px;
 }
