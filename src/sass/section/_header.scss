@@ -1,16 +1,23 @@
 header {
-    margin: 45px 0 40px 0;
-    //background-image: url('photo@2x.png');
+    height: 230px;
+    padding: 45px 0 40px 0;
+    background-image: url('../images/mobile/m-home-1X.jpg');
     background-size: cover;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .header {
+      background-image: url('../images/mobile/m-home-2X.jpg');
+    }
 }
 
 .header__title {
   display: none;
+}
+
+.logo {
+    margin-bottom: 45px;
 }
