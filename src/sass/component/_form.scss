@@ -9,9 +9,16 @@
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
-    border-bottom: .5px solid $secondaryText;
+    border-bottom: .5px solid $primaryBackgroundColor;
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: none;  
+    position: relative;
+    width: 280px;
+    color: $primaryText;
+
+    @include mq ('tablet') {
+      width: 336px;
+    }
 }
 
 .submit-btn {
@@ -20,16 +27,16 @@
     border-style: none;
     position: absolute;
     right: 20px;
-}
-
-.form__input {
-  position: relative;
-  width: 280px;
-  color: $secondaryText
+    @include mq ('tablet') {
+      right: 216;
+    }
+    @include mq ('desktop') {
+      right: 336;
+    }
 }
 
 .form__input::placeholder {
-  color: $secondaryText;
+  color: $primaryText;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -38,7 +45,7 @@
 
 .form__error {
     position: absolute;
-    top: 155px;
+    top: 155;
     display: block;
     font-weight: 400;
     font-size: 14px;
@@ -47,4 +54,8 @@
     color: $secondaryAccent;
     padding-left: 20px;
     padding-right: 20px;
+    @include mq ('tablet') {
+      padding-right: 188px;
+      padding-left: 187px;
+    }
 }

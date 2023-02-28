@@ -1,35 +1,37 @@
 <header class="header">
-    <div class="container">
-        <nav class="nav">
-            <div class="header__logo">
-                <svg class="icon--svg logo" width="24" height="24">
-                    <use href="./images/icons.svg#logo"></use>
-                </svg>
-                <a class="link header__title" href="./index.html">Filmoteka</a>
-            </div>
-            <ul class="list navbar">
-                <li class="navbar__item">
-                    <a class="link navbar__link current-link" href="./index.html">Home
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a class="link navbar__link" href="#">My Library
-                    </a>
-                </li>
-            </ul>
-        </nav>
+  <div class="container">
+    <nav class="nav">
+      <div class="header__logo">
+        <svg class="icon--svg logo" width="24" height="24">
+          <use href="./images/icons.svg#logo"></use>
+        </svg>
+        <a class="link header__title" href="./index.html">Filmoteka</a>
     </div>
-    <div class="form-container">
+      <ul class="list navbar">
+        <li class="navbar__item">
+          <a class="link navbar__link current-link" href="./index.html">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a class="link navbar__link" href="#">My Library</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="form-container">
         <form class="form" id="search-form">
-            <input class="form__input" id="search-query" type="text" name="searchQuery" autocomplete="off"
-                placeholder="Search movies..." />
-            <button class="submit-btn" type="submit">
-                <svg class="form__icon" width="12" height="12">
-                    <use href="./images/icons.svg#search"></use>
-                </svg></button>
+          <input class="form__input" id="search-query" type="text" name="searchQuery" autocomplete="off"
+            placeholder="Search movies..." />
+          <button class="submit-btn" type="submit">
+            <svg class="form__icon" width="12" height="12">
+              <use href="./images/icons.svg#search"></use>
+            </svg>
+          </button>
         </form>
-        <p class="form__error hidden">Sorry! Your search was unsuccessful. Please enter a new query to search again.</p>
+        <p class="form__error">Sorry! Your search was unsuccessful. Please enter a new query to search again.</p>
         <button type="button" class="button fetch-watched"> Watched</button>
         <button type="button" class="button fetch-queue">Queue</button>
+      </div>
     </div>
+  </div>
 </header>
