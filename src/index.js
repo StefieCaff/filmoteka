@@ -5,7 +5,7 @@ import getMovieDetails from './js/get-movie-details';
 import './js/genre-names';
 
 //-------------DOM------------------
-const form = document.querySelector('form');
+const form = document.querySelector('form#search-form');
 const userInput = document.querySelector('input#search-query');
 
 //--------------API-----------------------
