@@ -8,10 +8,13 @@
     width: 34px;
     height: 3px;
     border-radius: 2px;
+  @include mq ('tablet') {
+    right: 185;
+  }
 
-    // @media screen and (min-width: 1200px) {
-    //     bottom: -4px;
-    // }
+  @include mq ('desktop') {
+      right: 179;
+  }
 }
 
 nav {
@@ -32,7 +35,7 @@ nav {
 
 .navbar__item {
   margin-bottom: 41px;
-  color: $secondaryText;
+  color: $primaryText;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
