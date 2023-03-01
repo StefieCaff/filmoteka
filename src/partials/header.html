@@ -1,4 +1,4 @@
-<header class="header-library">
+<header class="header">
   <div class="container">
     <nav class="nav">
       <div class="header__logo">
@@ -9,12 +9,12 @@
     </div>
       <ul class="list navbar">
         <li class="navbar__item">
-          <a class="link navbar__link" href="./index.html">Home
-          <span class="current-link hidden"></span></a>
+          <a id="toggleHome" class="link navbar__link" href="./index.html">Home
+          <span class="current-link current-home"></span></a>
         </li>
         <li class="navbar__item">
-          <a class="link navbar__link" href="#">My Library
-          <span class="current-link"></span></a>
+          <a id="toggleLibrary" class="link navbar__link" href="#">My Library
+          <span class="current-library"></span></a>
         </li>
       </ul>
     </nav>
@@ -22,16 +22,16 @@
     <div class="hero">
       <div class="form-container">
         <form class="form" id="search-form">
-          <input class="form__input hidden" id="search-query" type="text" name="searchQuery" autocomplete="off"
+          <input class="form__input" id="search-query" type="text" name="searchQuery" autocomplete="off"
             placeholder="Search movies..." />
-          <button class="submit-btn hidden" type="submit">
+          <button class="submit-btn" type="submit">
             <svg class="form__icon" width="12" height="12">
               <use href="./images/icons.svg#search"></use>
             </svg>
           </button>
         </form>
-        <p class="form__error hidden">Sorry! Your search was unsuccessful. Please enter a new query to search again.</p>
-        <div>
+        <!-- <p class="form__error">Sorry! Your search was unsuccessful. Please enter a new query to search again.</p> -->
+        <div class="library-btns hidden">
           <button type="button" class="button watched-btn"> Watched</button>
           <button type="button" class="button queue-btn">Queue</button>
         </div>
