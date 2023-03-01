@@ -23,7 +23,7 @@
   
   @include mq ('desktop') {
     background-image: url('/src/images/desktop/d-home-1X.jpg');
-    
+
     @include mq ('retina') {
       background-image: url('/src/images/desktop/d-home-2X.jpg');
     }
