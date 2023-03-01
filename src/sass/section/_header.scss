@@ -4,28 +4,28 @@
   margin-left: auto;
   margin-right: auto;
   background: rgba(0, 0, 0, 0.56);
-  background-image: url(../images/mobile/m-home-1X.jpg);
+  background-image: url('/src/images/mobile/m-home-1X.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
     
     @include mq ('retina') {
-      background-image: url(../images/mobile/m-home-2X.jpg);
+      background-image: url('/src/images/mobile/m-home-2X.jpg');
     }
 
   @include mq ('tablet') {
-    background-image: url(../images/tablet/t-home-1X.jpg);
+    background-image: url('/src/images/tablet/t-home-1X.jpg');
     
       @include mq ('retina') {
-        background-image: url(../images/tablet/t-home-2X.jpg);
+        background-image: url('/src/images/tablet/t-home-2X.jpg');
       }
     }
   
   @include mq ('desktop') {
-    background-image: url(../images/desktop/d-home-1X.jpg);
+    background-image: url('/src/images/desktop/d-home-1X.jpg');
     
     @include mq ('retina') {
-      background-image: url(../images/desktop/d-home-2x.jpg);
+      background-image: url('/src/images/desktop/d-home-2X.jpg');
     }
   }
 }
