@@ -3,14 +3,15 @@ import getMovies from './js/get-movies';
 import getById from './js/get-by-id';
 import getMovieDetails from './js/get-movie-details';
 import './js/genre-names';
-import { showHome, showLibrary } from './js/show-home-library';
+import { showHome, showLibrary } from './js/show-elements';
 
 //-------------DOM------------------
 const form = document.querySelector('form#search-form');
 const userInput = document.querySelector('input#search-query');
-
 const homeLink = document.querySelector('a#toggleHome');
 const libraryLink = document.querySelector('a#toggleLibrary');
+const watchedBtn = document.querySelector('.watched-btn');
+const queueBtn = document.querySelector('.queue-btn');
 
 //--------------API-----------------------
 const API_KEY = 'api_key=cc8aceddc1acb4be5d6024b16563f8b2';
@@ -28,7 +29,7 @@ getMovies(API_TRENDING + trendingParams);
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const input = userInput.value;
+    const input = userInput.value.trim();
     if (input) {
         console.log(input)
         getMovies(API_SEARCH + searchParams +input + '&page=1&include_adult=false');  
@@ -49,3 +50,4 @@ libraryLink.addEventListener('click', (e) => {
     e.preventDefault();
     showLibrary();
 });
+
