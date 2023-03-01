@@ -5,14 +5,19 @@
     flex-direction: column;
 }
 
+.form {
+  position: relative;
+}
+
 .form__input {
+    // position: relative;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom: .5px solid $primaryBackgroundColor;
     background-color: transparent;
     box-shadow: none;  
-    position: relative;
+    
     width: 280px;
     color: $primaryText;
 
@@ -22,17 +27,11 @@
 }
 
 .submit-btn {
+    position: absolute;
+    right: 0px;
     background-color: transparent;
     box-shadow: none;
     border-style: none;
-    position: absolute;
-    right: 20px;
-    @include mq ('tablet') {
-      right: 216;
-    }
-    @include mq ('desktop') {
-      right: 336;
-    }
 }
 
 .form__input::placeholder {
