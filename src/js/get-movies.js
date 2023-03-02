@@ -10,14 +10,14 @@ export default async function getMovies(url) {
         const movies = await response.json();
         console.log(movies.results);
         if (movies.results.length !== 0) {
-            const {
-              currentPage = movies.page,
-              nextPage = movies.page + 1,
-              prevPage = movies.page - 1,
-              totalPages = movies.total_pages,
-              title = movies.results.title,
-              date = movies.results.release_date
-            } = movies
+            // const {
+            //   currentPage = movies.page,
+            //   nextPage = movies.page + 1,
+            //   prevPage = movies.page - 1,
+            //   totalPages = movies.total_pages,
+            //   title = movies.results.title,
+            //   date = movies.results.release_date
+            // } = movies
              //insert markup function
             
             hideError(); //adds hidden class
