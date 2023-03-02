@@ -5,9 +5,14 @@ li of movie */
 
 
 
-export default async function fetchById() {
-    
-    console.log(movies);
-   
+export default async function getById(url) {
+    apiId = url; 
+   try {
+        const response = await fetch(url);
+        const movies = await response.json();
+        console.log(movies.results);
+   } catch (error) {
+        console.log(error.message);
+    }
 
 };
