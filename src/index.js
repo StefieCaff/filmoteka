@@ -20,7 +20,7 @@ const apiTrending = BASE_URL + '/trending/all/day?' + API_KEY;
 const apiSearch = BASE_URL + '/search/movie?' + API_KEY;
 const trendingParams = '&language=en-US&page=1&include_adult=false&total_pages=100'
 const searchParams = '&language=en-US&query=';
-
+const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 //-------------fetch trending movies---------------------
 getMovies(apiTrending + trendingParams);
 
