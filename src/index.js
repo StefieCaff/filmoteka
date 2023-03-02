@@ -16,13 +16,13 @@ const queueBtn = document.querySelector('.queue-btn');
 //--------------API-----------------------
 const API_KEY = 'api_key=cc8aceddc1acb4be5d6024b16563f8b2';
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_TRENDING = BASE_URL + '/trending/all/day?' + API_KEY;
-const API_SEARCH = BASE_URL + '/search/movie?' + API_KEY;
+const apiTrending = BASE_URL + '/trending/all/day?' + API_KEY;
+const apiSearch = BASE_URL + '/search/movie?' + API_KEY;
 const trendingParams = '&language=en-US&page=1&include_adult=false&total_pages=100'
 const searchParams = '&language=en-US&query=';
 
 //-------------fetch trending movies---------------------
-getMovies(API_TRENDING + trendingParams);
+getMovies(apiTrending + trendingParams);
 
 
 //-------------get searched movies----------------------
@@ -32,9 +32,9 @@ form.addEventListener('submit', (e) => {
     const input = userInput.value.trim();
     if (input) {
         console.log(input)
-        getMovies(API_SEARCH + searchParams +input + '&page=1&include_adult=false');  
+        getMovies(apiSearch + searchParams +input + '&page=1&include_adult=false');  
     } else {
-        getMovies(API_TRENDING);
+        getMovies(apiTrending);
     }
     
 });
