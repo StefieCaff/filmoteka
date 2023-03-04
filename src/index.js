@@ -28,7 +28,7 @@ const movieId = '';
 const apiId = BASE_URL + `movie/${movieId}?` + API_KEY; 
 
 
-82856
+// movie id for testing 82856
 //-------------fetch trending movies---------------------
 getMovies(apiTrending + params);
 
