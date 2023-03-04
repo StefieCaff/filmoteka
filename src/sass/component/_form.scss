@@ -1,60 +1,71 @@
 .form-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .form {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .form__input {
-    // position: relative;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom: .5px solid $primaryBackgroundColor;
-    background-color: transparent;
-    box-shadow: none;  
-    
-    width: 280px;
-    color: $primaryText;
-
-    @include mq ('tablet') {
-      width: 336px;
-    }
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: .5px solid $primaryBackgroundColor;
+  background-color: transparent;
+  box-shadow: none;
+  width: 280px;
+  color: $primaryText;
+  transition: border-bottom 5s, color .5s;
+  @include mq ('tablet') {
+    width: 336px;
+  }
 }
 
 .submit-btn {
-    position: absolute;
-    right: 0px;
-    background-color: transparent;
-    box-shadow: none;
-    border-style: none;
+  position: absolute;
+  right: 0px;
+  background-color: transparent;
+  box-shadow: none;
+  border-style: none;
+  background-color: transparent;
+}
+
+.form__input {
+  width: 280px;
+  color: $primaryText;
 }
 
 .form__input::placeholder {
-  color: $primaryText;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  margin-left: 20px;
-}
-
-.form__error {
-    position: absolute;
-    top: 155;
-    display: block;
+    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    align-items: center;
-    color: $secondaryAccent;
-    padding-left: 20px;
-    padding-right: 20px;
-    @include mq ('tablet') {
-      padding-right: 188px;
-      padding-left: 187px;
-    }
+    color: $primaryText;
+}
+
+.form__error {
+  position: absolute;
+  top: 155;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  color: $secondaryAccent;
+  padding: 0 20px;
+
+  @include mq ('tablet') {
+    padding: 0 187px;
+  }
+
+  @include mq ('desktop') {
+    padding: 0 315px;
+  }
 }

@@ -3,6 +3,7 @@
   padding-bottom: 97px;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color .9s, background-image .9s;
   background: rgba(0, 0, 0, 0.56);
   background-image: url('/src/images/mobile/m-home-1X.jpg');
   background-repeat: no-repeat;
@@ -19,7 +20,7 @@
       @include mq ('retina') {
         background-image: url('/src/images/tablet/t-home-2X.jpg');
       }
-    }
+  }
   
   @include mq ('desktop') {
     background-image: url('/src/images/desktop/d-home-1X.jpg');
@@ -40,7 +41,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  transition: background-color .9s, background-image .9s;
   @include mq ('retina') {
     background-image: url('/src/images/mobile/m-library-2X.jpg');
   }
@@ -65,9 +66,9 @@
 
 .header__title {
   display: none;
+
     @include mq ('tablet') {
       display: contents;
-      // margin-bottom: 37px;
       font-weight: 500;
       font-size: 30px;
       line-height: 35px;
