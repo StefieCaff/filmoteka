@@ -1,7 +1,6 @@
 
 import getMovies from './js/get-movies';
 import getById from './js/get-by-id';
-import getMovieDetails from './js/get-movie-details';
 import './js/genre-names';
 import { showHome, showLibrary } from './js/show-elements';
 
