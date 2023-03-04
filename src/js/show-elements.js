@@ -1,6 +1,6 @@
 
 const showHome = () => {
-     const headerLibrary = document.querySelector('.header')
+    const headerLibrary = document.querySelector('.header')
     const currentHome = document.querySelector('.current-home')
     const currentLibrary = document.querySelector('.current-library');
     const homeForm = document.querySelector(".form")
@@ -19,12 +19,14 @@ const showLibrary = () => {
     const currentLibrary = document.querySelector('.current-library');
     const homeForm = document.querySelector(".form")
     const libraryBtns = document.querySelector('.library-btns');
-    
+    const noMovies = document.querySelector('.form__error');
+   
     headerLibrary.classList.add("header-library");
     currentHome.classList.remove("current-link");
     currentLibrary.classList.add("current-link");
     homeForm.classList.add("hidden");
     libraryBtns.classList.remove("hidden");
+    noMovies.classList.add('hidden');
 }
 
 const showError = () => {

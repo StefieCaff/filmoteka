@@ -4,7 +4,7 @@ import './genre-names'
 and logs it to console */
 
 export default async function getMovies(url) {
-    lastUrl = url;
+    //lastUrl = url;
     try {
         const response = await fetch(url);
         const movies = await response.json();
