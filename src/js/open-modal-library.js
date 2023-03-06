@@ -53,7 +53,7 @@ export function onLibraryGallery(e) {
   refs.modalBackdrop.addEventListener('click', onBackdropClick);
   refs.closeModalBtn.addEventListener('click', offCloseModal);
 
-  //Вешаем событие на buttons:
+  //Вешаем событие на buttons/ movie modal event on buttons
   if (refs.modalBackdrop.classList.contains('show-modal')) {
     refs.modalContainer.addEventListener('click', onModalLibraryBtnsClick);
   }

@@ -1,8 +1,9 @@
 
-import getMovies from './js/get-movies';
-import getById from './js/get-by-id';
+import getMovies from './js/API/get-movies';
+import getById from './js/API/get-by-id';
 import './js/genre-names';
 import { showHome, showLibrary } from './js/show-elements';
+import './js/local-storage';
 
 //-------------DOM------------------
 const form = document.querySelector('form#search-form');
