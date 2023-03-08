@@ -1,32 +1,23 @@
 
 import axios from 'axios';
+import genreList from '../API/genres-list';
+import { getGenres } from '../API/get-genres';
 import { showError, hideError } from "../show-elements";
-/* roughdraft api call fetches first page array of 20  movies
-and logs it to console */
+import home from '../home'; 
 
-export default async function getMovies(url) {
-    //lastUrl = url;
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+const apiSearch = '/search/movie?'
+const language = 'en-US';
+
+
+async function getMovies(url) {
+    
     try {
         const response = await fetch(url);
         const movies = await response.json();
         console.log(movies.results);
-        if (movies.results.length !== 0) {
-            // const {
-            //   currentPage = movies.page,
-            //   nextPage = movies.page + 1,
-            //   prevPage = movies.page - 1,
-            //   totalPages = movies.total_pages,
-            //   title = movies.results.title,
-            //   date = movies.results.release_date
-            // } = movies
-             //insert markup function
-            
-            hideError(); //adds hidden class
-        } else {
-            showError(); //removes hidden class
-        }
-    } catch (error) {
-        console.log(error.message);
+       
     }
-};
 
+    }

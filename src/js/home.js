@@ -13,11 +13,6 @@ const libraryLink = document.querySelector('a#toggleLibrary');
 const watchedBtn = document.querySelector('.watched-btn');
 const queueBtn = document.querySelector('.queue-btn');
 
-//--------------API-----------------------
-const API_KEY = 'api_key=cc8aceddc1acb4be5d6024b16563f8b2';
-const BASE_URL = 'https://api.themoviedb.org/3';
-const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-
 const apiTrending = BASE_URL + '/trending/all/day?' + API_KEY;
 const apiSearch = BASE_URL + '/search/movie?' + API_KEY;
 const params = '&language=en-US&page=1&include_adult=false&total_pages=100'

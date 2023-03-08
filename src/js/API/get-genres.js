@@ -1,7 +1,7 @@
 //Function to get genre names
 export function getGenres(genreList, genreIds) {
-  const arrOfGenresName = genreIds.map(currenId => {
-    const genre = genreList.find(elem => elem.id === currenId);
+  const arrOfGenresName = genreIds.map(currentId => {
+    const genre = genreList.find(elem => elem.id === currentId);
 
     return genre.name;
   });
