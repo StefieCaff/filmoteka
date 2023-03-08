@@ -6,7 +6,7 @@ import './js/switch-bg-theme';
 
 import { scrollFunction } from './js/button-up';
 
-import { onCliсkBtnWatchGallery } from './js/API/get-movie-trailer';
+import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
 
 import { onOpenQueueLibrary } from './js/queue-library';
 
@@ -18,10 +18,12 @@ import { refs } from './js/refs';
 
 ///Запуск спінера при завантаженні launch spinner on boot
 spinnerPlay();
+
+///Закінчення спінера при завантаженні ending spinner when loading
 window.addEventListener('load', function (e) {
   spinnerStop();
 });
-///Закінчення спінера при завантаженні ending spinner when loading
+
 
 ///Запуск кнопки вверх при скролі trigger up button on scroll
 window.addEventListener('scroll', scrollFunction);
@@ -30,4 +32,4 @@ window.addEventListener('scroll', scrollFunction);
 //render library storage watchedMovies
 window.addEventListener('load', loadWatchedMoviesFromLocalStorage);
 
-refs.libraryGallery.addEventListener('click', onCliсkBtnWatchGallery);
+refs.libraryGallery.addEventListener('click', onClickBtnWatchGallery);
