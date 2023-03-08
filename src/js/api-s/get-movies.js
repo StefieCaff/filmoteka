@@ -11,7 +11,8 @@ const apiSearch = '/search/movie?'
 const language = 'en-US';
 
 
-async function getMovies(url) {
+export default async function getMovies(url) {
+
     
     try {
         const response = await fetch(url);
@@ -20,4 +21,4 @@ async function getMovies(url) {
        
     }
 
-    }
+    };
