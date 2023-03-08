@@ -1,5 +1,4 @@
 import { showError, hideError } from "../show-elements";
-import '../genre-names'
 /* roughdraft api call fetches first page array of 20  movies
 and logs it to console */
 

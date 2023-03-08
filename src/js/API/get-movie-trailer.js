@@ -38,10 +38,10 @@ export async function renderTrailerBtn(movieId, selector) {
 
 const cardRef = document.querySelector('.modal__content');
 
-cardRef.addEventListener('click', onCliсkBtnWatchGallery);
+cardRef.addEventListener('click', onClickBtnWatchGallery);
 
 // виклик трейлера на галерею
-export async function onCliсkBtnWatchGallery(event) {
+export async function onClickBtnWatchGallery(event) {
   try {
     if (event.target.classList.contains('watch-trailer-btn-gallery')) {
       const filmId = event.target.dataset.id;
