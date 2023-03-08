@@ -1,3 +1,5 @@
+
+import axios from 'axios';
 import { showError, hideError } from "../show-elements";
 /* roughdraft api call fetches first page array of 20  movies
 and logs it to console */
