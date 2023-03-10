@@ -1,20 +1,20 @@
-import { spinnerPlay, spinnerStop } from './js/spinner';
+import { spinnerPlay, spinnerStop } from './spinner';
 
-import { openModalTeam } from './js/open-modal-team';
+//import { openModalTeam } from './js/open-modal-team';
 
-import './js/switch-bg-theme';
+//import './js/switch-bg-theme';
 
-import { scrollFunction } from './js/button-up';
+import { scrollFunction } from './button-up';
 
-import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
+import { onClickBtnWatchGallery } from './API/get-movie-trailer';
 
-import { onOpenQueueLibrary } from './js/queue-library';
+import { onOpenQueueLibrary } from './queue-library';
 
-import { onOpenWatchedLibrary } from './js/watched-library';
+import { onOpenWatchedLibrary } from './watched-library';
 
-import { loadWatchedMoviesFromLocalStorage } from './js/watched-library';
-import { onLibraryGallery } from './js/open-modal-library';
-import { refs } from './js/refs';
+import { loadWatchedMoviesFromLocalStorage } from './watched-library';
+import { onLibraryGallery } from './open-modal-library';
+import { refs } from './refs';
 
 ///Запуск спінера при завантаженні launch spinner on boot
 spinnerPlay();
