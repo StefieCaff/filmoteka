@@ -58,5 +58,8 @@
 //     showLibrary();
 // });
 
-import { refs } from './js/refs';
-import './js/home';
+import './js/library';
+import './js/library-gallery';
+import './js/open-modal-library';
+import './js/local-storage';
+i

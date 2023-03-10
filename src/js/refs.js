@@ -21,12 +21,12 @@ export const refs = {
 };
 
 
-const form = document.querySelector('form#search-form');
-const userInput = document.querySelector('input#search-query');
-const homeLink = document.querySelector('a#toggleHome');
-const libraryLink = document.querySelector('a#toggleLibrary');
-const watchedBtn = document.querySelector('.watched-btn');
-const queueBtn = document.querySelector('.queue-btn');
+// const form = document.querySelector('form#search-form');
+// const userInput = document.querySelector('input#search-query');
+// const homeLink = document.querySelector('a#toggleHome');
+// const libraryLink = document.querySelector('a#toggleLibrary');
+// const watchedBtn = document.querySelector('.watched-btn');
+// const queueBtn = document.querySelector('.queue-btn');
 
 // export const refs = {
 //   galleryMovies: document.querySelector('.gallery__list'),
