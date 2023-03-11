@@ -1,14 +1,30 @@
 
 // import getMovies from './js/api-s/get-movies';
 // import getById from './js/api-s/get-by-id';
-// import { showHome, showLibrary } from './js/show-elements';
+import { showHome, showLibrary } from './js/show-elements-s';
+import { refs } from './js/refs'
+import './js/gallery';
+// import './js/library';
+import './js/local-storage';
+import './js/queue-library';
+import './js/watched-library';
+import './js/button-up';
+import './js/spinner';
+import './js/open-modal-library';
+import './js/pagination';
+import './js/paginationLocalStorage';
+
+
+
+
+
 // import './js/local-storage';
 
 // //-------------DOM------------------
 // const form = document.querySelector('form#search-form');
 // const userInput = document.querySelector('input#search-query');
-// const homeLink = document.querySelector('a#toggleHome');
-// const libraryLink = document.querySelector('a#toggleLibrary');
+ const homeLink = document.querySelector('a#toggleHome');
+ const libraryLink = document.querySelector('a#toggleLibrary');
 // const watchedBtn = document.querySelector('.watched-btn');
 // const queueBtn = document.querySelector('.queue-btn');
 
@@ -48,24 +64,12 @@
 
 // //-------home and library show event listeners----------
 
-// homeLink.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     showHome();
-// });
+homeLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    showHome();
+});
 
-// libraryLink.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     showLibrary();
-// });
-
-
-import './js/gallery';
-// import './js/library';
-import './js/local-storage';
-import './js/queue-library';
-import './js/watched-library';
-import './js/button-up';
-import './js/spinner';
-import './js/open-modal-library';
-import './js/pagination';
-import './js/paginationLocalStorage';
+libraryLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    showLibrary();
+});
