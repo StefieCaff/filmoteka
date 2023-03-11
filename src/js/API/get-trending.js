@@ -13,7 +13,7 @@ let page = 1;
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-// HTTP - запрос на трендовые фильмы - за день
+// HTTP -request for trending films - per day
 export async function getTrendingMovies(page) {
   try {
     const { data } = await axios.get(
@@ -26,7 +26,7 @@ export async function getTrendingMovies(page) {
   }
 }
 
-// Функция для создания карточки фильма:
+// Function to create a movie card
 export function createMarkup({
   id,
   title,
@@ -35,7 +35,7 @@ export function createMarkup({
   release_date: releaseDate,
   vote_average: voteAverage,
 }) {
-  // Получаем жанры для рендера
+  // render genres
   const genres = getGenres(genresList, genreIds);
 
   return `<li class="frame" data-id="${id}">
@@ -73,7 +73,7 @@ export function createMarkup({
           </li>`;
 }
 
-// Функция, которая вставялет полученные данные на страницу
+// render trending Movies
 export async function renderTrendingMovies() {
   let firstPage = 1;
   try {

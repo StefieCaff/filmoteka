@@ -3,7 +3,7 @@ import { refs } from './refs';
 
 import getMovies from './api-s/get-movies';
 import getById from './api-s/get-by-id';
-import { showHome, showLibrary } from './show-elements';
+import { showHome, showLibrary } from './show-elements-s';
 
 //-------------DOM------------------
 const form = document.querySelector('form#search-form');
