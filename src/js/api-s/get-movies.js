@@ -2,8 +2,8 @@
 import axios from 'axios';
 import genreList from '../API/genres-list';
 import { getGenres } from '../API/get-genres';
-import { showError, hideError } from "../show-elements";
-import home from '../home'; 
+import { showError, hideError } from "../show-elements-s";
+import home from '../home-s'; 
 
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';

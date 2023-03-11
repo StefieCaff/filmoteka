@@ -58,5 +58,14 @@
 //     showLibrary();
 // });
 
-import { refs } from './js/refs';
-import './js/home';
+
+import './js/gallery';
+// import './js/library';
+import './js/local-storage';
+import './js/queue-library';
+import './js/watched-library';
+import './js/button-up';
+import './js/spinner';
+import './js/open-modal-library';
+import './js/pagination';
+import './js/paginationLocalStorage';

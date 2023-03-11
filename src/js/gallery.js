@@ -42,5 +42,5 @@ export async function onFormSubmit(e) {
 
 function notification() {
   refs.notification.textContent =
-    'Search result not successful. Enter the correct movie name and try again.';
+    'Sorry! Your search was unsuccessful. Please enter a new query to search again.';
 }
