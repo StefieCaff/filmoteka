@@ -1,81 +1,90 @@
-<header class="header">
+<header class="header header-library">
   <div class="container header__section">
-    <div class="header__nav-container">
-      <a
-        href="/src/index.html"
-        target="_self"
-        rel="noopener noreferrer"
-        title="Logo"
-        class="logo"
-      >
-        <svg class="logo__icon" width="24" height="24">
-          <use href="./images/icons.svg#logo"></use>
-        </svg>
-        <span class="logo__text">Filmoteka</span>
-      </a>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a
-              href="/src/index.html"
-              target="_self"
-              rel="noopener noreferrer"
-              title="Home page"
-              class="header__item-link current"
-              >Home</a
-            >
-          </li>
-          <li class="header__item">
-            <a
-              href="#"
-              target="_self"
-              rel="noopener noreferrer"
-              title="My library"
-              class="header__item-link js-library"
-              >My library</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <form action="submit" class="header__form">
-      <div class="header__form-search">
-        <input
-          type="text"
-          name="searchQuery"
-          autofocus
-          autocomplete="off"
-          placeholder="Movie search"
-          class="header__form-input"
-        />
-        <button
-          type="submit"
-          aria-label="search-button"
-          class="header__search-btn"
-        >
-          <svg class="header__form-icon" width="12" height="12">
-            <use href="./images/icons.svg#search"></use>
+    <nav class="header__nav nav">
+      <div class="header__nav-container header__logo">
+        <a
+          href="/src/index.html"
+          target="_self"
+          rel="noopener noreferrer"
+          title="Logo"
+          class="logo link">
+          <svg class="logo__icon icon--svg logo" width="24" height="24">
+            <use href="./images/icons.svg#logo"></use>
           </svg>
-        </button>
+          <span class="logo__text header__title">Filmoteka</span>
+        </a>
       </div>
-    </form>
-    <p class="header__notification"></p>
+      <ul class="header__list list navbar">
+        <li class="header__item  navbar__item">
+          <a
+            href="/src/index.html"
+            target="_self"
+            rel="noopener noreferrer"
+            title="Home page"
+            id="toggleHome"
+            class="header__item-link current link navbar__link">Home
+            <span class="current-home"></span>
+          </a>
+        </li>
+        <li class="header__item navbar__item">
+          <a
+            href="#"
+            target="_self"
+            rel="noopener noreferrer"
+            title="My library"
+            id="toggleLibrary"
+            class="header__item-link js-library link">My library
+            <span class="current-library current-link"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- Theme-switcher -->
-    <!-- <div class="theme-switcher">
-      <div class="theme-switcher__thumb"></div>
-      <button
-        type="button"
-        aria-label="switch-theme"
-        class="theme-switcher__btn"
-      >
-        <svg class="theme-switcher__icon" width="16" height="16">
-          <use href="/src/images/icons.svg#icon-moon"></use>
-        </svg>
-        <svg class="theme-switcher__icon" width="16" height="16">
-          <use href="/src/images/icons.svg#icon-sun"></use>
-        </svg>
-      </button>
-    </div> -->
+    <div class="hero">
+      <div class="form-container">
+        <form action="submit" class="header__form form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            autofocus
+            autocomplete="off"
+            placeholder="Search movies..."
+            class="header__form-input form__input"
+            id="search-query"/>
+          <button
+            type="submit"
+            aria-label="search-button"
+            class="header__search-btn submit-btn">
+            <svg class="header__form-icon form-icon" width="12" height="12">
+              <use href="./images/icons.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <p class="form__error hidden header__notification">Sorry! Your search was unsuccessful. Please enter a new query to
+          search again.</p>
+        <div class="library-btns hidden">
+          <button type="button" class="button watched-btn"> Watched</button>
+          <button type="button" class="button queue-btn">Queue</button>
+        </div>
+      </div><!-- <p class="header__notification"></p> -->
+    </div> <!-- Theme-switcher -->    
   </div>
 </header>
+
+
+
+<!-- insert above for theme switch -->
+  <!-- <div class="theme-switcher">
+        <div class="theme-switcher__thumb"></div>
+        <button
+          type="button"
+          aria-label="switch-theme"
+          class="theme-switcher__btn">
+          <svg class="theme-switcher__icon" width="16" height="16">
+            <use href="/src/images/icons.svg#icon-moon"></use>
+          </svg>
+          <svg class="theme-switcher__icon" width="16" height="16">
+            <use href="/src/images/icons.svg#icon-sun"></use>
+          </svg>
+        </button>
+      </div> -->
