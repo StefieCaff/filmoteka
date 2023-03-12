@@ -20,9 +20,17 @@
   border-bottom: .5px solid $primaryBackgroundColor;
   background-color: transparent;
   box-shadow: none;
+  border-radius: 5px;
   width: 280px;
   color: $primaryText;
   transition: border-bottom 5s, color .5s;
+    &:hover,
+    &:focus {
+      background: #ff6b0130;
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    }
+
+
   @include mq ('tablet') {
     width: 336px;
   }
@@ -35,11 +43,11 @@
   box-shadow: none;
   border-style: none;
   background-color: transparent;
-}
 
-.form__input {
-  width: 280px;
-  color: $primaryText;
+  &:hover,
+    &:focus {
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    }
 }
 
 .form__input::placeholder {
