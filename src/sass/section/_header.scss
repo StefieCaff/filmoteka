@@ -62,31 +62,3 @@
     }
   }
 }
-
-
-.header__title {
-  display: none;
-
-    @include mq ('tablet') {
-      display: contents;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 35px;
-      align-items: center; 
-      text-align: center;
-    }  
-}
-
-.logo {
-    margin-bottom: 45px;
-    @include mq ('tablet') {
-      margin-bottom: 0;
-      margin-right: 10px;
-    }
-}
-
-@include mq ('tablet') {
-  .header__logo {
-    margin-bottom: 37px;
-  }
-}
