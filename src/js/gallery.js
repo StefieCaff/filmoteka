@@ -42,5 +42,5 @@ export async function onFormSubmit(e) {
 
 function notification() {
   refs.notification.textContent =
-    'Sorry! Your search was unsuccessful. Please enter a new query to search again.';
+    'Sorry! Your search was unsuccessful. Please enter a new query.';
 }

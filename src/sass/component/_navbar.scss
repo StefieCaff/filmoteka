@@ -10,12 +10,38 @@ nav {
   flex-direction: row;
 }
 
+
+.logo__text {
+  display: none;
+
+  @include mq ('tablet') {
+    color: $primaryText;
+    display: contents;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.logo {
+  &:hover,
+    &:focus {
+      background: #ff6b013d;
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.667);
+    }
+  @include mq ('tablet') {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
 .navbar__item:first-child {
   margin-right: 40px;
 }
 
 .navbar__item {
-  margin-bottom: 41px;
   color: $primaryText;
   font-weight: 500;
   font-size: 12px;
@@ -25,6 +51,11 @@ nav {
 
 .navbar__link {
   position: relative;
+  &:hover,
+  &:focus {
+    background: #ff6b0131;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.56);
+  }
 }
 
 .current-link {
