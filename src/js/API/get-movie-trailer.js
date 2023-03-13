@@ -19,7 +19,7 @@ async function fetchMovieTrailer(movieId) {
   }
 }
 
-// функція отримання даних про трейлер
+// fetch for retrieving data about the trailer
 async function getTrailers(movieId) {
   const results = await fetchMovieTrailer(movieId);
   const officialTrailer = results.find(trailer => trailer.official === true);
@@ -27,7 +27,7 @@ async function getTrailers(movieId) {
   return officialTrailer;
 }
 
-// функція рендеру кнопоки для модалки
+// button renderer function for modal
 export async function renderTrailerBtn(movieId, selector) {
   const officialTrailer = await getTrailers(movieId);
   if (!officialTrailer) {
@@ -40,7 +40,7 @@ const cardRef = document.querySelector('.modal__content');
 
 cardRef.addEventListener('click', onClickBtnWatchGallery);
 
-// виклик трейлера на галерею
+// trailer wiki to gallery
 export async function onClickBtnWatchGallery(event) {
   try {
     if (event.target.classList.contains('watch-trailer-btn-gallery')) {
@@ -56,14 +56,14 @@ export async function onClickBtnWatchGallery(event) {
   }
 }
 
-// функція додавання розмітки в DOM
+// function of adding markup in DOM
 function renderTrailer(youtubeKey) {
   const markup = templateTrailer(youtubeKey);
   const trailerPlayerRef = document.querySelector('.modal-trailer');
   trailerPlayerRef.innerHTML = markup;
 }
 
-// функція створення розмітки
+// opening function
 function templateTrailer(youtubeKey) {
   return `
     <iframe

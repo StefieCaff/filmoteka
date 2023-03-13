@@ -6,22 +6,21 @@ import { spinnerPlay, spinnerStop } from './js/spinner';
 import { scrollFunction } from './js/button-up';
 
 import { showHome, showLibrary } from './js/show-elements-s';
+
+import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
+
+import { onOpenQueueLibrary } from './js/queue-library';
+
+import { onOpenWatchedLibrary } from './js/watched-library';
+
+import { loadWatchedMoviesFromLocalStorage } from './js/watched-library';
+import { onLibraryGallery } from './js/open-modal-library';
+
+
+
 import { refs } from './js/refs'
 import './js/gallery';
-//import './js/library';
-import './js/local-storage';
-import './js/queue-library';
-import './js/watched-library';
-import './js/button-up';
-import './js/open-modal-library';
-import './js/pagination';
-import './js/paginationLocalStorage';
 
-
-
-
-
-// import './js/local-storage';
 
 // //-------------DOM------------------
 // const form = document.querySelector('form#search-form');
@@ -87,3 +86,6 @@ refs.libraryLink.addEventListener('click', (e) => {
     e.preventDefault();
     showLibrary();
 });
+
+// trailers on load
+refs.galleryMovies.addEventListener('click', onClickBtnWatchGallery);

@@ -47,30 +47,28 @@
 
 .modal-close {
   position: absolute;
-  top: 4px;
-  right: 8px;
+  top: 18;
+  right: 18;
   padding: 0;
-  width: 30px;
-  height: 30px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  color: red;
-  background-color: #ffffff;
+  fill: currentColor;
+  background-color: transparent;
   border: none;
-
-  &:hover .modal-close__icon,
-  &:focus .modal-close__icon {
-    fill: currentColor;
-  }
-}
+ }
 
 .modal-close__icon {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill .9s, box-shadow .9s, background-color .9s, border .2s;
+  border-radius: 5px;
+    &:hover,
+    &:focus {
+      border: .5px solid $color-accent;
+      fill: $color-accent;
+      background-color: 0px 8px 43px rgba(255, 107, 1, 0.6);;
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    }
 }
-
 .show-modal {
   opacity: 1;
   visibility: visible;
