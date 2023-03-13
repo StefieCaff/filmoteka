@@ -45,7 +45,6 @@ button {
 
 body {
   min-width: 320px;
-
   @include font();
   font-family: $font-stack;
   color: $color-text;
