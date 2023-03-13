@@ -17,18 +17,18 @@ import { onLibraryGallery } from './open-modal-library';
 import { refs } from './refs';
 
 // launch spinner on boot
-spinnerPlay();
+//spinnerPlay();
 
 /// ending spinner when loading
-window.addEventListener('load', function (e) {
-  spinnerStop();
-});
+//window.addEventListener('load', function (e) {
+//   spinnerStop();
+// });
 
 
 // trigger up button on scroll
-window.addEventListener('scroll', scrollFunction);
+//window.addEventListener('scroll', scrollFunction);
 
 // render library storage watchedMovies
 //window.addEventListener('load', loadWatchedMoviesFromLocalStorage);
 
-refs.libraryGallery.addEventListener('click', onClickBtnWatchGallery);
+//refs.libraryGallery.addEventListener('click', onClickBtnWatchGallery);

@@ -16,56 +16,16 @@ import { onOpenWatchedLibrary } from './js/watched-library';
 import { loadWatchedMoviesFromLocalStorage } from './js/watched-library';
 import { onLibraryGallery } from './js/open-modal-library';
 
-
+import { renderTrendingMovies } from './js/API/get-trending';
 
 import { refs } from './js/refs'
 import './js/gallery';
-
-
-// //-------------DOM------------------
-// const form = document.querySelector('form#search-form');
-// const userInput = document.querySelector('input#search-query');
-//  const homeLink = document.querySelector('a#toggleHome');
-//  const libraryLink = document.querySelector('a#toggleLibrary');
-// const watchedBtn = document.querySelector('.watched-btn');
-// const queueBtn = document.querySelector('.queue-btn');
-
-// //--------------API-----------------------
-// const API_KEY = 'api_key=cc8aceddc1acb4be5d6024b16563f8b2';
-// const BASE_URL = 'https://api.themoviedb.org/3';
-// const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-
-// const apiTrending = BASE_URL + '/trending/all/day?' + API_KEY;
-// const apiSearch = BASE_URL + '/search/movie?' + API_KEY;
-// const params = '&language=en-US&page=1&include_adult=false&total_pages=100'
-// const searchParams = '&language=en-US&query=';
-
-
-// const movieId = '';
-// const apiId = BASE_URL + `movie/${movieId}?` + API_KEY; 
-
-
-// // movie id for testing 82856
-// //-------------fetch trending movies---------------------
-// getMovies(apiTrending + params);
-
-
-// //-------------get searched movies----------------------
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     const input = userInput.value.trim();
-//     if (input) {
-//         console.log(input)
-//         getMovies(apiSearch + searchParams +input + '&page=1&include_adult=false');  
-//     } else {
-//         getMovies(apiTrending + params);
-//     }
-    
-// });
+import { clearGallery } from './js/supportFunctions';
 
 // launch spinner on boot
 spinnerPlay();
+
+//-----------------event listeners----------------------
 
 /// ending spinner when loading
 window.addEventListener('load', function (e) {
@@ -75,14 +35,23 @@ window.addEventListener('load', function (e) {
 // trigger up button on scroll
 window.addEventListener('scroll', scrollFunction);
 
-// //-------home and library show event listeners----------
 
+// render library storage watchedMovies
+refs.libraryLinkHeader.addEventListener('click', loadWatchedMoviesFromLocalStorage);
+
+// render trending when home link clicked
+
+
+
+// switch home and library headers
 refs.homeLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    showHome();
+  e.preventDefault();
+  showHome();
+  clearGallery(refs.galleryMovies);
+  renderTrendingMovies();
 });
 
-refs.libraryLink.addEventListener('click', (e) => {
+refs.libraryLinkHeader.addEventListener('click', (e) => {
     e.preventDefault();
     showLibrary();
 });
