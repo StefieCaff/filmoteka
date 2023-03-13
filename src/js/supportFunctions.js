@@ -2,7 +2,6 @@ export const clearGallery = function (currentGallery) {
   currentGallery.innerHTML = '';
 };
 
-
 // form validation
 // function ValidateActInsert() {
 //     var specialChars = /[^a-zA-Z ]/g;

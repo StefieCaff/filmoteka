@@ -18,16 +18,18 @@ export const refs = {
   btnLibraryWatched: document.querySelector('.watched__btn'),
   libraryBtnsList: document.querySelector('.library__btn-list'),
   libraryGallery: document.querySelector('.library-gallery__list'),
-  pagination: document.querySelector('.pagination-section')
+  //pagination: document.querySelector('.pagination-section'),
+   homeLink: document.querySelector('a#toggleHome'),
+   libraryLink: document.querySelector('a#toggleLibrary')
 };
 
 
-const form = document.querySelector('form#search-form');
-const userInput = document.querySelector('input#search-query');
-const homeLink = document.querySelector('a#toggleHome');
-const libraryLink = document.querySelector('a#toggleLibrary');
-const watchedBtn = document.querySelector('.watched-btn');
-const queueBtn = document.querySelector('.queue-btn');
+// const form = document.querySelector('form#search-form');
+// const userInput = document.querySelector('input#search-query');
+// const homeLink = document.querySelector('a#toggleHome');
+// const libraryLink = document.querySelector('a#toggleLibrary');
+// const watchedBtn = document.querySelector('.watched-btn');
+// const queueBtn = document.querySelector('.queue-btn');
 
 // export const refs = {
 //   galleryMovies: document.querySelector('.gallery__list'),

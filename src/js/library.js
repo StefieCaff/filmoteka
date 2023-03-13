@@ -29,6 +29,6 @@ window.addEventListener('load', function (e) {
 window.addEventListener('scroll', scrollFunction);
 
 // render library storage watchedMovies
-window.addEventListener('load', loadWatchedMoviesFromLocalStorage);
+//window.addEventListener('load', loadWatchedMoviesFromLocalStorage);
 
 refs.libraryGallery.addEventListener('click', onClickBtnWatchGallery);
