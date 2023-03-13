@@ -49,7 +49,7 @@ homeLink.addEventListener('click', (e) => {
     showHome();
 });
 
-libraryLink.addEventListener('click', (e) => {
+libraryLinkHeader.addEventListener('click', (e) => {
     e.preventDefault();
     showLibrary();
 });

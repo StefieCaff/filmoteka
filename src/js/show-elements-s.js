@@ -1,42 +1,32 @@
+import { refs } from './refs';
+import { clearGallery } from './supportFunctions';
+
+const currentHome = document.querySelector('.current-home')
+const currentLibrary = document.querySelector('.current-library');
 
 const showHome = () => {
-    const headerLibrary = document.querySelector('.header')
-    const currentHome = document.querySelector('.current-home')
-    const currentLibrary = document.querySelector('.current-library');
-    const homeForm = document.querySelector(".form")
-    const libraryBtns = document.querySelector('.library-btns');
-    
-    headerLibrary.classList.remove("header-library");
+    refs.headerLibrary.classList.remove("header-library");
     currentHome.classList.add("current-link");
     currentLibrary.classList.remove("current-link");
-    homeForm.classList.remove("hidden");
-    libraryBtns.classList.add("hidden");
+    refs.formSearch.classList.remove("hidden");
+    refs.libraryBtns.classList.add("hidden");
 };
 
 const showLibrary = () => {
-    const headerLibrary = document.querySelector('.header')
-    const currentHome = document.querySelector('.current-home')
-    const currentLibrary = document.querySelector('.current-library');
-    const homeForm = document.querySelector(".form")
-    const libraryBtns = document.querySelector('.library-btns');
-    const noMovies = document.querySelector('.form__error');
-   
-    headerLibrary.classList.add("header-library");
+    refs.headerLibrary.classList.add("header-library");
     currentHome.classList.remove("current-link");
     currentLibrary.classList.add("current-link");
-    homeForm.classList.add("hidden");
-    libraryBtns.classList.remove("hidden");
-    noMovies.classList.add('hidden');
+    refs.formSearch.classList.add("hidden");
+    refs.libraryBtns.classList.remove("hidden");
+    refs.notification.classList.add('hidden');
 }
 
 const showError = () => {
-    const noMovies = document.querySelector('.form__error');
-    noMovies.classList.remove('hidden');  
+  refs.notification.classList.remove('hidden');  
 }
 
 const hideError = () => {
-    const noMovies = document.querySelector('.form__error');
-    noMovies.classList.add('hidden');
+  refs.notification.classList.add('hidden');
 }
 
 const activeBtn = () => {
