@@ -14,7 +14,7 @@
   transition: background .9s, box-shadow .9s;
     &:hover,
     &:focus {
-      background: $color-accent;
+      background: #FF6B01;
       box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
     }
 }
