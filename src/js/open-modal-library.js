@@ -78,7 +78,7 @@ export function createMarkupModal({
   overview,
   id,
 }) {
-  // Проверка есть ли такой обьект в локал сторадж?
+  // Checking whether there is such an object in the local storage
   const watchedMoviesLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
   const queueMoviesLocalStorage = loadFromLocalStorage(KEY_QUEUE_MOVIES);
 
@@ -132,7 +132,7 @@ export function createMarkupModal({
               </button>
               <button type="button" aria-label="add or remove from queue" class="button-queue__modal js-add-queue">${textBtnQueue}</button>
               </div>
-               <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden " data-id=${id} >Watch the trailer</button>
+               <button type="button" aria-label="watch trailer" class="watch-trailer-btn-gallery is-hidden" data-id=${id} >Watch trailer</button>
           </div>
           `;
 }
