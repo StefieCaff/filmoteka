@@ -153,7 +153,7 @@ function createMarkupModal({
             </button>
             <button type="button" aria-label="add or remove from queue" class="button-queue__modal js-add-queue">${textBtnQueue}</button>
             </div>
-             <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden " data-id=${id} >Watch trailer</button>
+             <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden " data-id=${id} >Watch the trailer</button>
         </div>
         `;
 }
