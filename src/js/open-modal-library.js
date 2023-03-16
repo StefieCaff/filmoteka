@@ -15,7 +15,7 @@ import { IMAGE_URL } from './API/api-params';
 
 import { refs } from './refs';
 
-refs.libraryGallery.addEventListener('click', onLibraryGallery);
+//refs.libraryGallery.addEventListener('click', onLibraryGallery);
 
 let idMovie;
 let currentMovie;
@@ -53,7 +53,7 @@ export function onLibraryGallery(e) {
   refs.modalBackdrop.addEventListener('click', onBackdropClick);
   refs.closeModalBtn.addEventListener('click', offCloseModal);
 
-  //Вешаем событие на buttons/ movie modal event on buttons
+  // movie modal event on buttons
   if (refs.modalBackdrop.classList.contains('show-modal')) {
     refs.modalContainer.addEventListener('click', onModalLibraryBtnsClick);
   }
