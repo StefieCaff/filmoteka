@@ -78,7 +78,7 @@ export function createMarkupModal({
   overview,
   id,
 }) {
-  // Проверка есть ли такой обьект в локал сторадж?
+  // Checking whether there is such an object in the local storage?
   const watchedMoviesLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
   const queueMoviesLocalStorage = loadFromLocalStorage(KEY_QUEUE_MOVIES);
 

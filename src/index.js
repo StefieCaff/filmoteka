@@ -36,11 +36,8 @@ window.addEventListener('load', function (e) {
 window.addEventListener('scroll', scrollFunction);
 
 
-// render library storage watchedMovies
+// render watched library storage 
 refs.libraryLinkHeader.addEventListener('click', loadWatchedMoviesFromLocalStorage);
-
-// render trending when home link clicked
-
 
 
 // switch home and library headers
@@ -53,7 +50,8 @@ refs.homeLink.addEventListener('click', (e) => {
 
 refs.libraryLinkHeader.addEventListener('click', (e) => {
     e.preventDefault();
-    showLibrary();
+  showLibrary();
+  refs.btnLibraryWatched.classList.add('button-active')
 });
 
 // trailers on load

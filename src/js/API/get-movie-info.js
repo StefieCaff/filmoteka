@@ -2,10 +2,10 @@ import axios from 'axios';
 import { refs } from '../refs';
 import { KEY_API, IMAGE_URL } from './api-params';
 import { renderBtn } from '../API/get-movie-trailer';
-import {
-  loadWatchedMoviesFromLocalStorage,
-  loadQueueMoviesFromLocalStorage,
-} from '../watched-library';
+// import {
+//   loadWatchedMoviesFromLocalStorage,
+//   loadQueueMoviesFromLocalStorage,
+// } from '../watched-library';
 
 import {
   KEY_QUEUE_MOVIES,
@@ -58,7 +58,7 @@ async function openModal(e) {
   refs.modalBackdrop.addEventListener('click', onBackdropClick);
   refs.closeModalBtn.addEventListener('click', offCloseModal);
 
-  //Вешаем событие на buttons:
+  //We hang an event on buttons:
   if (refs.modalBackdrop.classList.contains('show-modal')) {
     refs.modalContainer.addEventListener('click', onModalBtnsClick);
   }
@@ -99,7 +99,7 @@ function createMarkupModal({
   overview,
   id,
 }) {
-  // Проверка есть ли такой обьект в локал сторадж?
+  // Checking if there is such an object in the local storage?
   const watchedMoviesLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
   const queueMoviesLocalStorage = loadFromLocalStorage(KEY_QUEUE_MOVIES);
 
@@ -164,13 +164,13 @@ export function offCloseModal() {
   refs.modalContainer.removeEventListener('click', onModalBtnsClick);
   refs.body.classList.remove('no-scroll');
 
-  if (refs.btnLibraryQueue) {
-    if (refs.btnLibraryQueue.classList.contains('library__btn--active')) {
-      loadQueueMoviesFromLocalStorage();
-    } else {
-      loadWatchedMoviesFromLocalStorage();
-    }
-  }
+  // if (refs.btnLibraryQueue) {
+  //   if (refs.btnLibraryQueue.classList.contains('library__btn--active')) {
+  //     loadQueueMoviesFromLocalStorage();
+  //   } else {
+  //     loadWatchedMoviesFromLocalStorage();
+  //   }
+  // }
 }
 
 export function onBackdropClick(e) {
