@@ -49,12 +49,12 @@
   left: 25px;
   width: 100px;
   height: 30px;
-  background-color: $color-accent-secondary;
+  background-color: $color-accent;
   opacity: 0.7;
 
-  border: none;
+  border: 1px solid $color-border;
   border-radius: 5px;
-  transition: background-color $transition-duration $transition-animation;
+  transition: opacity $transition-duration, box-shadow $transition-duration;
 
   @include font(10px, 1.16, 500);
   color: #ffffff;
@@ -75,8 +75,8 @@
 
   &:hover,
   &:focus {
-    background-color: $color-accent;
-    border: none;
+    opacity: 1;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
   }
 }
 
@@ -102,16 +102,17 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: $color-accent-secondary;
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+  background-color: $color-accent;
   opacity: 0.7;
 
-  border: none;
+  border: 1px solid $color-border;
   border-radius: 5px;
-  transition: background-color $transition-duration $transition-animation;
+  transition: opacity $transition-duration, box-shadow $transition-duration;
 
   &:hover,
   &:focus {
-    background-color: $color-accent;
-    border: none;
+    opacity: 1;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
   }
 }

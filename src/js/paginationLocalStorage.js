@@ -43,7 +43,7 @@ export default function pagination(allQueueMovies, currentPage) {
   globalCurrentpage = currentPage;
 
   if (currentPage > 1) {
-    markup += `<li class="pagination-button-arrow-left">< Previous</li>`;
+    markup += `<li class="pagination-button-arrow-left"><</li>`;
   }
   if (currentPage > 1) {
     markup += `<li class="pagination-button">1</li>`;
@@ -73,7 +73,7 @@ export default function pagination(allQueueMovies, currentPage) {
 
   if (allPages > currentPage) {
     markup += `<li class="pagination-button">${allPages}</li>`;
-    markup += `<li class="pagination-button-arrow">Next ></li>`;
+    markup += `<li class="pagination-button-arrow">></li>`;
   }
 
   paginationBox.innerHTML = markup;
@@ -92,9 +92,9 @@ function handlerPagination(evt) {
     return;
   }
 
-  if (evt.target.textContent === 'Next >' && currentPage < allPages) {
+  if (evt.target.textContent === '>' && currentPage < allPages) {
     currentPage += 1;
-  } else if (evt.target.textContent === '< Previous' && currentPage !== 1) {
+  } else if (evt.target.textContent === '<' && currentPage !== 1) {
     currentPage -= 1;
   } else {
     currentPage = Number(evt.target.textContent);

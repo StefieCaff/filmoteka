@@ -1,13 +1,12 @@
 .pagination-container,
 .pagination-library-container {
-    @include centeredFlex();
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px 0;
 
-    @media screen and (min-width: 320px) and (max-width: 768px) {
-        padding: 40px 0;
-    }
-
-    @include mobile {
-        padding: 50px 0 60px 0;
+    @include tablet {
+        @include centeredFlex;
     }
 }
 
@@ -21,38 +20,45 @@
     }
 }
 
-.dots,
-.first-button,
-.last-button {
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
+// .dots,
+// .first-button,
+// .last-button {
+//     @media screen and (max-width: 768px) {
+//         display: none;
+//     }
+// }
 
 .pagination-button {
     padding: 0;
     background-color: $bg-body;
-    border: none;
+    border: 1px solid $color-border;
     color: $color-text;
     cursor: pointer;
     font-family: Roboto;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.333;
+    transition: box-shadow .9s;
+    filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+
+    &:hover,
+    &:focus {
+      background: $color-accent;
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    }
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
-        font-size: 9px;
+      font-size: 9px;
     }
 }
 
 
 .pagination--current {
-    //width: 40px;
-    //height: 40px;
+   
     border-radius: 5px;
     background-color: $color-accent;
     color: $color-text-lighter;
-    padding: 12px 13px;
+    padding: 12px 14px;
 }
 
 .arrow-left,
@@ -67,25 +73,42 @@
     background-repeat: no-repeat;
 }
 
-/*.arrow-left {
-    background-image: url(/src/images/arrow-left.svg);
-}
+// .arrow-left {
+//     background-image: url('/src/images/arrow-left.png');
+// }
 
-.arrow-right {
-    background-image: url(/src/images/arrow-right.svg);
-}*/
+// .arrow-right {
+//     background-image: url('/src/images/arrow-right.png');
+// }
 
 .pagination-button-arrow {
-    color: $color-accent;
     cursor: pointer;
+    color: transparent;
+    background-image: url('/src/images/arrow-left.svg');
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $bg-footer;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    stroke: #000;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .pagination-button-arrow-left {
-    margin-right: 16px;
-    color: $color-accent;
     cursor: pointer;
+    background-image: url('/src/images/arrow-right.svg');
+    color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $bg-footer;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    stroke: #000;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-        margin-right: 5px;
+    @include tablet {
+        margin-right: 16px;
     }
 }

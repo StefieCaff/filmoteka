@@ -25,7 +25,7 @@ export default function pagination(currentPage, allPages) {
   localStorage.setItem('page', storagePage);
 
   if (currentPage > 1) {
-    markup += `<li class="pagination-button-arrow-left">< Previous</li>`;
+    markup += `<li class="pagination-button-arrow-left"><</li>`;
   }
   if (currentPage > 1) {
     markup += `<li class="pagination-button">1</li>`;
@@ -55,7 +55,7 @@ export default function pagination(currentPage, allPages) {
 
   if (allPages > currentPage) {
     markup += `<li class="pagination-button">${allPages}</li>`;
-    markup += `<li class="pagination-button-arrow">Next ></li>`;
+    markup += `<li class="pagination-button-arrow">></li>`;
   }
 
   paginationBox.innerHTML = markup;
@@ -70,7 +70,7 @@ function handlerPagination(evt) {
     return;
   }
 
-  if (evt.target.textContent === 'Next >') {
+  if (evt.target.textContent === '>') {
     //console.log('page', page);
     //console.log(globalCurrentPage);
     //globalCurrentPage = page;
@@ -90,7 +90,7 @@ function handlerPagination(evt) {
     return;
   }
 
-  if (evt.target.textContent === '< Previous') {
+  if (evt.target.textContent === '<') {
     if (searchValue) {
       getSearchMovies(searchValue, (globalCurrentpage -= 1)).then(data => {
         refs.galleryMovies.innerHTML = data.map(createMarkup).join('');

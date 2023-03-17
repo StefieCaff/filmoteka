@@ -1,74 +1,75 @@
 .btn-up-wrapper {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: -40px;
+  bottom: 210px;
+  right: 45px;
   z-index: 99;
-  width: 100px;
-  height: 100px;
 
   &__text {
-    font-size: 16px;
-    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
     text-transform: uppercase;
     color: $color-text-lighter;
-    transition: $transition-duration;
-    
-      &:hover,
-      &:focus {
-        font-size: 18px;      
-      }
   }
 
   &__btn {
-    position: absolute;
-    left: 0;
-    bottom: 50;
-    width: 45px;
-    height: 35px;
-    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
     cursor: pointer;
     border: none;
-    background-color: #FF6B01;
-    transition: box-shadow .9s;
+    background-color: #ff6b01b3;
+    transition: box-shadow .9s, background-color .9s;
     
       &:hover,
       &:focus {
-        border: 1px solid $color-text-light;
-        text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
+        background-color: $primaryAccent;
         box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+      }
+  }
+
+  &__icon {
+    fill: rgba(0, 0, 0, 0.604);
+    position: absolute;
+    bottom: -20;
+    right: -35;
+    transition: fill .9s;
+    
+      &:hover,
+      &:focus {
+        fill: $headerBackground;
       }
   }
 }
 
 
 
-@include bigmobile {
-  .btn-up-wrapper {
-     
-    &__text{
-      color: $color-accent;
-      text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
-        &:hover,
-        &:focus {
-          text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
-          color: $color-text-light;
+// @include bigmobile {
+//   .btn-up-wrapper {
+    // right: 19.5;
+//     &__text{
+//       color: $color-accent;
+//       //text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
+//         &:hover,
+//         &:focus {
+//           text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
+//          // color: $color-text-light;
       
-    }
-  }
-    &__btn{
-      border: 1px solid $color-accent;
-      background-color: transparent;
-      background-image: url(../images/popcorn.png);
-      background-position: center;
-      background-size: contain;
-      transition: background-color .9s, box-shadow .9s;
+//     }
+//   }
+//     &__btn{
+//       //border: 1px solid $color-accent;
+//       background-color: transparent;
+//       //background-image: url(../images/popcorn.png);
+//       //background-position: center;
+//       //background-size: contain;
+//       transition: background-color .9s, box-shadow .9s;
     
-    &:hover,
-    &:focus {
-      background-color: $color-accent;
-      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
-    }
-  }
-  }
-}
+//     &:hover,
+//     &:focus {
+//       background-color: $color-accent;
+//       box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+//     }
+//   }
+//   }
+// }
