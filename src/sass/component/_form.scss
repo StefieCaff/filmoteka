@@ -23,8 +23,9 @@
   box-shadow: none;
   border-radius: 5px;
   width: 280px;
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
   color: $primaryText;
-  transition: border-bottom 5s, color .5s;
+  transition: background .9s, box-shadow .9s;
     &:hover,
     &:focus {
       background: #ff6b011c;
@@ -45,11 +46,12 @@
   box-shadow: none;
   border-style: none;
   background-color: transparent;
-
+  transition: box-shadow .9s;
+  filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
   &:hover,
-    &:focus {
+  &:focus {
       box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
-    }
+  }
 }
 
 .form__input::placeholder {

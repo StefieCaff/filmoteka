@@ -10,9 +10,9 @@
   background-position: center;
   background-size: cover;
     
-    @include mq ('retina') {
-      background-image: url('/src/images/mobile/m-home-2X.jpg');
-    }
+  @include mq ('retina') {
+    background-image: url('/src/images/mobile/m-home-2X.jpg');
+  }
 
   @include mq ('tablet') {
     background-image: url('/src/images/tablet/t-home-1X.jpg');
@@ -36,7 +36,7 @@
   padding-bottom: 65px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(0, 0, 0, 0.56);
+  background: rgba(58, 0, 0, 0.56);
   background-image: url('/src/images/mobile/m-library-1X.jpg');
   background-repeat: no-repeat;
   background-position: center;
