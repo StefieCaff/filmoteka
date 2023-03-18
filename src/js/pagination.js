@@ -60,6 +60,7 @@ export default function pagination(currentPage, allPages) {
 
   paginationBox.innerHTML = markup;
 }
+
 function handlerPagination(evt) {
   const page = evt.target.textContent;
   const searchValue = refs.formSearch.searchQuery.value;

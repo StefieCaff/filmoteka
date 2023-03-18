@@ -19,6 +19,8 @@ if (refs.btnLibraryWatched) {
 export function onOpenWatchedLibrary() {
   refs.btnLibraryWatched.classList.add('library__btn--active');
   refs.btnLibraryQueue.classList.remove('library__btn--active');
+  refs.btnLibraryWatched.classList.add('button-active')
+  refs.btnLibraryQueue.classList.remove('button-active')
   const paginationBox = document.querySelector('.pagination-library-container');
   const moviesFromLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
 
@@ -59,38 +61,32 @@ export function createMarkupWatchedMovies({
   const genresForRender = concatGenres(genres.map(genre => genre.name));
 
   return `<li class="frame" data-id="${id}">
-         <div class="frame__wrap">
+          <div class="frame__wrap">
             <p class="frame__raiting">${
-              voteAverage.toFixed(1) ? voteAverage.toFixed(1) : '---'
-            }</p>
-           <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden" data-id=${id} >Watch the trailer</button>
-          <img
-            data-id="${id}"
-            src="${
-              posterPath
+              voteAverage.toFixed(1) ? voteAverage.toFixed(1) : '---'}
+            </p>
+            <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden" data-id=${id} >Watch the trailer</button>
+            <img
+              data-id="${id}"
+              src="${posterPath
                 ? IMAGE_URL + posterPath
-                : 'https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-'
-            }"
-            alt="${title ? title : 'Title coming soon'}"
-            class="frame__poster"
-            loading="lazy"
-          />
+                : 'https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-'}"
+              alt="${title ? title : 'Title coming soon'}"
+              class="frame__poster"
+              loading="lazy"/>
             </div>
-
-          <div class="frame__info" data-id=${id}>
-            <p class="frame__title" data-id=${id}>${
-    title ? title : 'Title coming soon'
-  }</p>
-            <p class="frame__genres" data-id=${id}>${
-    genresForRender ? genresForRender : '---'
-  }</p>
-            <p class="frame__year" data-id=${id}>${
-    new Date(releaseDate).getFullYear()
-      ? new Date(releaseDate).getFullYear()
-      : '---'
-  }</p>
-         
-          </div>
+            <div class="frame__info" data-id=${id}>
+              <p class="frame__title" data-id=${id}>
+                ${title ? title : 'Title coming soon'}
+              </p>
+              <p class="frame__genres" data-id=${id}>
+              ${genresForRender ? genresForRender : '---'}
+              </p>
+              <p class="frame__year" data-id=${id}>
+                ${new Date(releaseDate).getFullYear()
+                ? new Date(releaseDate).getFullYear(): '---'}
+              </p>
+            </div>
           </li>`;
 }
 
@@ -121,7 +117,7 @@ export function createMarkupWhenLocalStorageEmpty() {
         <h2 class="container-nothing__title">Ouhh... it's empty in here!</h2>
         <p class="container-nothing__text">
         <a title="Link to main page" class="container-nothing__link" href="./index.html">Go back</a> and
-        add your favorite movies.
+        add your favorite movies :).
         </p>
     </div>
 </li>

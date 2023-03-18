@@ -8,5 +8,5 @@ export function spinnerStop() {
   window.setTimeout(function () {
     refs.body.classList.remove('loading');
     refs.body.classList.add('loaded');
-  }, 500);
+  }, 600);
 }

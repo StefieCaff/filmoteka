@@ -24,6 +24,7 @@ let globalCurrentpage = 0;
  * @return {String} markup - markup for pagination
  */
 let allPages = 1;
+
 export default function pagination(allQueueMovies, currentPage) {
   if (window.innerWidth >= 1280) {
     allPages = Math.ceil(allQueueMovies / 9);

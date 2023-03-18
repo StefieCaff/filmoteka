@@ -16,10 +16,11 @@ if (refs.btnLibraryQueue) {
 
 export let localQueueMovies;
 
-export function onOpenQueueLibrary(e) {
+export function onOpenQueueLibrary() {
   refs.btnLibraryQueue.classList.add('library__btn--active');
   refs.btnLibraryWatched.classList.remove('library__btn--active');
   refs.btnLibraryWatched.classList.remove('button-active')
+  refs.btnLibraryQueue.classList.add('button-active')
   const paginationBox = document.querySelector('.pagination-library-container');
   localQueueMovies = loadFromLocalStorage(KEY_QUEUE_MOVIES);
 
