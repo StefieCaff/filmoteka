@@ -11,9 +11,10 @@
 }
 
 .preloader__image {
+  fill: $color-accent;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: auto;
   text-align: center;
   animation: preloader-rotate 2s infinite linear;

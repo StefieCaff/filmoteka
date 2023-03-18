@@ -29,16 +29,16 @@ const hideError = () => {
   refs.notification.classList.add('hidden');
 }
 
-const activeBtn = () => {
-const  activeBtn= document.querySelector('.button');
-    activeBtn.classList.add('button-active');
-}
+// const activeBtn = () => {
+// const  activeBtn= document.querySelector('.button');
+//     activeBtn.classList.add('button-active');
+// }
 
-const inactiveBtn = () => {
-const  activeBtn= document.querySelector('.button');
-    activeBtn.classList.remove('button-active');
-}
+// const inactiveBtn = () => {
+// const  activeBtn= document.querySelector('.button');
+//     activeBtn.classList.remove('button-active');
+// }
 
 
 
-export { showHome, showLibrary, showError, hideError, activeBtn, inactiveBtn };
+export { showHome, showLibrary, showError, hideError };

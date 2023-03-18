@@ -11,7 +11,7 @@ import {
   KEY_QUEUE_MOVIES,
   KEY_WATCHED_MOVIES,
   loadFromLocalStorage,
-  saveToLocalStorage,
+  // saveToLocalStorage,
   checkLocalStorageQueueMovies,
   checkLocalStorageWatchedMovies,
 } from '../local-storage';
