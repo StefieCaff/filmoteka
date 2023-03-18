@@ -45,10 +45,10 @@
 
 .modal__content .watch-trailer-btn-gallery {
   position: absolute;
-  top: 45px;
-  left: 25px;
-  width: 100px;
-  height: 30px;
+  top: 63px;
+  left: 35px;
+  width: 130px;
+  height: 44px;
   background-color: $color-accent;
   opacity: 0.7;
 
@@ -62,15 +62,15 @@
   text-transform: uppercase;
 
   @include tablet {
-    top: 50px;
+    top: 58px;
     left: 45px;
     width: 130px;
     height: 44px;
     @include font($font-size, $line-height, 500);
   }
-  @include desktop {
-    top: 50px;
-    left: 25px;
+  @include minidesktop {
+    top: 68px;
+    left: 48px;
   }
 
   &:hover,

@@ -116,11 +116,11 @@ export function createMarkupModal({
               </tr>
               <tr class="table-separator">
                 <th class="table__text">Original Title</th>
-                <th>${title ? title : originalName}</th>
+                <th class="table__text-description">${title ? title : originalName}</th>
               </tr>
               <tr class="table-separator">
                 <th class="table__text">Genre</th>
-                <th>${modalGenres}</th>
+                <th class="table__text-description">${modalGenres}</th>
               </tr>
             </table>
             <b class="title-about__modal">ABOUT</b>

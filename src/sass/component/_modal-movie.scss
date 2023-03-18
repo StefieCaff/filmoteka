@@ -1,18 +1,72 @@
-.backdrop {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  z-index: 999;
-  background: rgba(0, 0, 0, 0.56);
-  width: 100vw;
-  height: 100vh;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
-}
+
+//----------origional backdrop styling-------------------
+// .backdrop {
+//   position: fixed;
+//   overflow: scroll;
+//   top: 0;
+//   z-index: 999;
+//   background: rgba(0, 0, 0, 0.56);
+//   width: 100vw;
+//   height: 100vh;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+// }
+
+//---tried to adjust styling for mobile horizontal bug w/o absolute poitions--------
+// .modal {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   position: relative;
+//   max-width: 280px;
+//   padding: 48px 20px 40px 20px;
+//   background-color: $bg-body;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//   transform: translate(-50%, -50%) scale(.9);
+//   transition: transform .5s ease-in-out;
+
+//   @include tablet {
+//       max-width: 618px;
+//       min-height: 460px;
+//       padding: 42px 28px;
+//     }
+
+//     @include minidesktop {
+//       max-width: 806px;
+//       min-height: 558px;
+//       padding: 50px 30px 40px 30px;
+//     }
+// }
 
 .backdrop.show-modal .modal {
   transform: translate(-50%, -50%) scale(1);
+}
+
+.backdrop {
+  position: fixed;
+  visibility: hidden;
+  z-index: 999;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.56);
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  
+  transition-property: visibility, opacity;
+  transition-duration: $transition-duration;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+
+  @media screen and (max-height: 450px) {
+    align-items: flex-start;
+  }
 }
 
 .modal {
@@ -29,20 +83,30 @@
   transition: transform 300ms ease-in-out;
 
   @include tablet {
-    min-width: 704px;
-    min-height: 552px;
-    padding: 40px 30px;
+    max-width: 618px;
+    min-height: 460px;
+    padding: 42px 28px;
   }
 
   @include minidesktop {
-    max-width: 806px;
+    max-width: 882px;
     min-height: 558px;
     padding: 50px 30px 40px 30px;
   }
 }
 
 .container-modal {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  @include tablet{
+   max-width: 264px; 
+  }
+
+    @include minidesktop {
+      max-width: 396px;
+    }
+  
 }
 
 .modal-close {
@@ -76,22 +140,25 @@
 }
 
 .modal__content {
+  display: flex;
+  flex-direction: column;
   @include tablet {
-    display: flex;
+    flex-direction: row;
   }
 }
 
 .title-modal {
   display: block;
   letter-spacing: 0.01em;
-  font-size: 19px;
-  line-height: 1.15;
+  font-size: 20px;
+  line-height: 23px;
   font-weight: 500;
-  margin: 20px 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 
   @include minidesktop {
     font-size: 30px;
-    line-height: 1.17;
+    line-height: 35px;
   }
 }
 
@@ -99,18 +166,18 @@
   height: 357px;
   width: 100%;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 0 0 32px 0;
 
   @include tablet {
     height: 100%;
     width: 264px;
     height: 374px;
-    margin: 0 68px 0 0;
+    margin: 0 32px 0 0;
   }
   @include minidesktop {
-    width: 375px;
+    width: 396px;
     height: 478px;
-    margin: 0 16px 0 0;
+    margin: 0 30px 0 0;
   }
 }
 
@@ -118,7 +185,8 @@
   display: inline-flex;
   letter-spacing: 0.01em;
   font-size: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  // margin-right: 20px;
   text-align: left;
   line-height: 1.5;
   font-weight: 500;
@@ -126,15 +194,20 @@
 
 .table__text {
   display: flex;
-  margin-right: 30px;
+  margin-right: 40px;
   color: #8c8c8c;
 
-  @include tablet {
-    margin-right: 41px;
+  @include minidesktop {
+    margin-right: 85px;
   }
 }
 
+.table__text-description {
+  max-width: 100px;
+}
+
 .title-about__modal {
+  margin-bottom: 10px;
   display: block;
   letter-spacing: 0.01em;
   font-size: 13px;
@@ -144,38 +217,20 @@
 
 .about-text__modal {
   display: inline-flex;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: $font-size;
   font-weight: 500;
   line-height: 1.7;
-  max-height: 120px;
   overflow: auto;
-
-  @include tablet {
-    max-height: 236px;
-  }
-
-  @include minidesktop {
-    margin-bottom: 0px;
-  }
 }
 
 .buttons-modal {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-
-  @include tablet {
-    position: absolute;
-    bottom: 40;
-    right: 40;
-  }
-
-  @include desktop {
-    display: flex;
-    position: absolute;
-    bottom: 40;
-    right: 40;
+  
+  @include minidesktop {
+  justify-content: flex-start;
   }
 }
 
@@ -186,7 +241,7 @@
   color: $color-text-lighter;
   background: $color-accent;
   border: 1px solid $color-border;
-  max-width: 110px;
+  max-width: 112.5px;
   max-height: 44px;
   border-radius: 5px;
   font-weight: 500;
@@ -212,6 +267,7 @@
   @include minidesktop {
     min-width: 136px;
     padding: 14px 7px;
+    margin-right: 15px;
   }
 }
 
@@ -221,7 +277,7 @@
   justify-content: center;
   border: 1px solid $color-text;
   background: $bg-footer;
-  max-width: 110px;
+  width: 112.5px;
   max-height: 44px;
   border-radius: 5px;
   font-weight: 500;
@@ -239,7 +295,6 @@
     }
 
   @include tablet {
-    margin-left: 15px;
     min-width: 125px;
     padding: 14px 7px;
     font-size: 13px;
