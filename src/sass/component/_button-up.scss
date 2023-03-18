@@ -4,6 +4,10 @@
   bottom: 210px;
   right: 45px;
   z-index: 99;
+  
+  @include tablet {
+    bottom: 150px;
+  }
 
   &__text {
     font-size: 15px;
@@ -23,22 +27,27 @@
     
       &:hover,
       &:focus {
-        background-color: $primaryAccent;
+        background-color: $color-accent;
         box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
       }
   }
 
   &__icon {
-    fill: rgba(0, 0, 0, 0.604);
+    fill: rgba(0, 0, 0, 0.703);
     position: absolute;
     bottom: -20;
     right: -35;
     transition: fill .9s;
-    
-      &:hover,
+
+    &:hover,
       &:focus {
-        fill: $headerBackground;
+        fill: $primaryAccent;
       }
+    
+    @include desktop {
+      fill: $color-text;
+    }
+
   }
 }
 
