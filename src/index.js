@@ -2,7 +2,8 @@
 // import getMovies from './js/api-s/get-movies';
 // import getById from './js/api-s/get-by-id';
 
-//import './js/paginationLocalStorage';
+import './js/paginationLocalStorage';
+import { openModalTeam } from './js/open-modal-team';
 import { spinnerPlay, spinnerStop } from './js/spinner';
 import { scrollFunction } from './js/button-up';
 
@@ -51,3 +52,6 @@ refs.libraryLinkHeader.addEventListener('click', (e) => {
 
 // trailers on load
 refs.galleryMovies.addEventListener('click', onClickBtnWatchGallery);
+
+//open footer team modal
+//refs.link.addEventListener('click', openModalTeam);
