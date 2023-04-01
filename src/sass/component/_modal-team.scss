@@ -1,6 +1,7 @@
 .basicLightbox {
   width: 100%;
-  z-index: 9;
+  z-index: 10;
+  min-height: 500px;
   // padding: 50px 20px 50px 20px;
 
   @media screen and (max-width: 767px) {
@@ -43,10 +44,7 @@
   // left: 50%;
   // transform: translate(-50%, -50%);
   width: 100%;
-
-  // @media screen and (max-width: 1023px) {
-  //   height: 100%;
-  // }
+  min-height: 500px;
 
   @include tablet {
     top: 50%;
@@ -130,12 +128,13 @@
   background-color: $bg-body;
   padding: 50px 20px 40px 20px;
   width: 100%;
-
+min-height: 500px;
   @include tablet {
     flex-direction: row;
     align-items: start;
   }
 }
+
 .team {
   border-radius: 10px;
 

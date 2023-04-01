@@ -1,4 +1,4 @@
-import { spinnerPlay, spinnerStop } from './spinner';
+//import { spinnerPlay, spinnerStop } from './spinner';
 
 //import { openModalTeam } from './open-modal-team';
 
