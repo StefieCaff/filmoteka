@@ -1,5 +1,5 @@
-export const clearGallery = function (currentGallery) {
-  currentGallery.innerHTML = '';
+export const clearHTML = function (currentHTML) {
+  currentHTML.innerHTML = '';
 };
 
 // form validation

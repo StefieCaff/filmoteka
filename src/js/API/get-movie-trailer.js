@@ -2,7 +2,7 @@ import axios from 'axios';
 import { KEY_API } from './api-params';
 import { refs } from '../refs';
 
-// функція HTTP запиту
+// HTTP request function
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.params = {
   api_key: KEY_API,

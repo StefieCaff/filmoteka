@@ -1,26 +1,27 @@
 
-// import getMovies from './js/api-s/get-movies';
-// import getById from './js/api-s/get-by-id';
-
-import './js/paginationLocalStorage';
-import { openModalTeam } from './js/open-modal-team';
 import { spinnerPlay, spinnerStop } from './js/spinner';
 import { scrollFunction } from './js/button-up';
 
+//import { openModalTeam } from './js/open-modal-team';
+//import { onLibraryGallery } from './js/open-modal-library';
+
 import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
 import { renderTrendingMovies } from './js/API/get-trending';
+import { handlerPagination } from './js/pagination';
+import './js/open-modal-library';
+import './js/gallery';
 
+import { onClickBtnWatchGallery, loadWatchedMoviesFromLocalStorage } from './js/watched-library';
 import { onOpenQueueLibrary } from './js/queue-library';
-import { loadWatchedMoviesFromLocalStorage } from './js/watched-library';
-import {onOpenWatchedLibrary } from './js/watched-library';
-import { onLibraryGallery } from './js/open-modal-library';
+import { paginationBox, handlerPaginationLocal } from './js/paginationLocalStorage';
+
 
 import { showHome, showLibrary } from './js/show-elements-s';
 import { refs } from './js/refs'
-import './js/gallery';
-import { clearGallery } from './js/supportFunctions';
+import { clearHTML } from './js/supportFunctions';
 
-// launch spinner on boot
+
+// launch spinner and trending movies on page load
 spinnerPlay();
 
 //-----------------event listeners----------------------
@@ -35,19 +36,21 @@ window.addEventListener('load', function (e) {
 window.addEventListener('scroll', scrollFunction);
 
 
-// switch home and library headers
+// switch home and library headers and gallery
 refs.homeLink.addEventListener('click', (e) => {
   e.preventDefault();
   showHome();
-  clearGallery(refs.galleryMovies);
+  clearHTML(refs.galleryMovies);
   renderTrendingMovies();
 });
 
 refs.libraryLinkHeader.addEventListener('click', (e) => {
   e.preventDefault();
   showLibrary();
-  clearGallery(refs.galleryMovies);
+  clearHTML(refs.galleryMovies);
   loadWatchedMoviesFromLocalStorage();
+  paginationBox.removeEventListener('click', handlerPagination);
+  paginationBox.addEventListener('click', handlerPaginationLocal);
 });
 
 // trailers on load

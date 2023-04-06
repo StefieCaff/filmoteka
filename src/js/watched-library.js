@@ -25,7 +25,7 @@ export function onOpenWatchedLibrary() {
   const moviesFromLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
 
   if (!moviesFromLocalStorage || !Object.keys(moviesFromLocalStorage).length) {
-    console.log(paginationBox);
+    //console.log(paginationBox);
     const markupNothing = createMarkupWhenLocalStorageEmpty();
     paginationBox.innerHTML = '';
     refs.libraryGallery.innerHTML = markupNothing;

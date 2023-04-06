@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { clearGallery } from './supportFunctions';
+import { clearHTML } from './supportFunctions';
 import { getSearchMovies, renderMoviesGallery } from './API/search-movies';
 import { spinnerPlay, spinnerStop } from './spinner';
 
@@ -25,8 +25,8 @@ export async function onFormSubmit(e) {
     try {
       const markupPictures = await getSearchMovies(searchResult, page);
 
-      if (markupPictures.length) {
-        clearGallery(refs.galleryMovies);
+      if (markupPictures.length > 0) {
+        clearHTML(refs.galleryMovies);
         renderMoviesGallery(markupPictures, refs.galleryMovies);
       } else {
         notification();

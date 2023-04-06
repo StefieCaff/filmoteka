@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { clearGallery } from './supportFunctions';
+import { clearHTML } from './supportFunctions';
 
 const currentHome = document.querySelector('.current-home')
 const currentLibrary = document.querySelector('.current-library');

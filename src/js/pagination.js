@@ -1,8 +1,12 @@
 import { getTrendingMovies, createMarkup } from './API/get-trending';
 import { getSearchMovies } from './API/search-movies';
 import { refs } from './refs';
+import { handlerPaginationLocal } from './paginationLocalStorage';
+
 const paginationBox = document.querySelector('.pagination-library-container');
+
 paginationBox.addEventListener('click', handlerPagination);
+
 let globalCurrentpage = 0;
 
 import { renderBtn } from './API/get-movie-trailer';
@@ -13,6 +17,7 @@ import { renderBtn } from './API/get-movie-trailer';
  * @param {Number} allPages  - all pages for search
  * @return {String} markup - markup for pagination
  */
+
 export default function pagination(currentPage, allPages) {
   let markup = '';
   let beforeTwoPage = currentPage - 2;
@@ -77,7 +82,7 @@ function handlerPagination(evt) {
     //globalCurrentPage = page;
     //console.log('after', globalCurrentPage);
 
-    if (searchValue) {
+    if (searchValue !== "") {
       getSearchMovies(searchValue, (globalCurrentpage += 1)).then(data => {
         refs.galleryMovies.innerHTML = data.map(createMarkup).join('');
         renderBtn();
@@ -92,7 +97,7 @@ function handlerPagination(evt) {
   }
 
   if (evt.target.textContent === '<') {
-    if (searchValue) {
+    if (searchValue !== "") {
       getSearchMovies(searchValue, (globalCurrentpage -= 1)).then(data => {
         refs.galleryMovies.innerHTML = data.map(createMarkup).join('');
         renderBtn();
@@ -110,15 +115,16 @@ function handlerPagination(evt) {
     return;
   }
 
-  if (searchValue) {
+  if (searchValue !== "") {
     getSearchMovies(searchValue, page).then(data => {
       refs.galleryMovies.innerHTML = data.map(createMarkup).join('');
       renderBtn();
     });
     return;
   }
+
   getTrendingMovies(page, globalCurrentpage).then(data => {
     refs.galleryMovies.innerHTML = data.map(createMarkup).join('');
     renderBtn();
   });
-}
+};
