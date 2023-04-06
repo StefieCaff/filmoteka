@@ -149,14 +149,14 @@ export function openModalTeam(event) {
 }
 
 
-export function openModalTeam() {
+// export function openModalTeam() {
 
-  const modalTeam = basicLightbox.create(markup, {
-    onShow: (modalTeam) => {
-      modalTeam.element().querySelector('a').onclick = modalTeam.close
-    }
-  })
+//   const modalTeam = basicLightbox.create(markup, {
+//     onShow: (modalTeam) => {
+//       modalTeam.element().querySelector('a').onclick = modalTeam.close
+//     }
+//   })
 
-  modalTeam.show()
+//   modalTeam.show()
 
-}
+// }
