@@ -13,8 +13,6 @@ import './js/gallery';
 
 import { onOpenWatchedLibrary, loadWatchedMoviesFromLocalStorage } from './js/watched-library';
 import { onOpenQueueLibrary } from './js/queue-library';
-import { paginationBox, handlerPaginationLocal } from './js/paginationLocalStorage';
-
 
 import { showHome, showLibrary } from './js/show-elements-s';
 import { refs } from './js/refs'
@@ -49,8 +47,6 @@ refs.libraryLinkHeader.addEventListener('click', (e) => {
   showLibrary();
   clearHTML(refs.galleryMovies);
   loadWatchedMoviesFromLocalStorage();
-  paginationBox.removeEventListener('click', handlerPagination);
-  paginationBox.addEventListener('click', handlerPaginationLocal);
 });
 
 // trailers on load

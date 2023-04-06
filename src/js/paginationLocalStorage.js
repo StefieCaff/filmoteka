@@ -4,19 +4,17 @@ import {
   KEY_QUEUE_MOVIES,
   loadFromLocalStorage,
 } from './local-storage';
-
 import {
   createMarkupWhenLocalStorageEmpty,
   createMarkupWatchedMovies,
 } from './watched-library';
-
 import { renderTrailerBtn } from './API/get-movie-trailer';
 
 export const paginationBox = document.querySelector(
   '.pagination-library-container'
 );
 
-paginationBox.addEventListener('click', handlerPaginationLocal);
+paginationBox.addEventListener('click', handlerPagination);
 
 let globalCurrentpage = 0;
 /**
@@ -84,7 +82,7 @@ export default function pagination(allQueueMovies, currentPage) {
 
 let currentPage = 1;
 
-function handlerPaginationLocal(evt) {
+function handlerPagination(evt) {
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
   }
