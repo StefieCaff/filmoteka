@@ -2,7 +2,7 @@
 import { spinnerPlay, spinnerStop } from './js/spinner';
 import { scrollFunction } from './js/button-up';
 
-//import { openModalTeam } from './js/open-modal-team';
+import { openModalTeam } from './js/open-modal-team';
 //import { onLibraryGallery } from './js/open-modal-library';
 
 import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
@@ -53,4 +53,4 @@ refs.libraryLinkHeader.addEventListener('click', (e) => {
 refs.galleryMovies.addEventListener('click', onClickBtnWatchGallery);
 
 //open footer team modal
-//refs.link.addEventListener('click', openModalTeam);
+refs.link.addEventListener('click', openModalTeam);
