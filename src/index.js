@@ -11,7 +11,7 @@ import { handlerPagination } from './js/pagination';
 import './js/open-modal-library';
 import './js/gallery';
 
-import { onClickBtnWatchGallery, loadWatchedMoviesFromLocalStorage } from './js/watched-library';
+import { onOpenWatchedLibrary, loadWatchedMoviesFromLocalStorage } from './js/watched-library';
 import { onOpenQueueLibrary } from './js/queue-library';
 import { paginationBox, handlerPaginationLocal } from './js/paginationLocalStorage';
 
