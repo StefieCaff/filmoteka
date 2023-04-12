@@ -16,13 +16,13 @@ const objects = [
   {
     name: 'Angelina Andronov',
     photo: Angelina,
-    role: 'Main developer',
+    role: 'Lead developer',
     git: 'https://github.com/andangelina',
   },
   {
     name: 'Duma Caffarel',
     photo: Duma,
-    role: 'Developer',
+    role: 'Jr. Developer',
     git: 'https://github.com/StefieCaff',
   },  
 ];
