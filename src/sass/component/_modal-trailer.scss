@@ -61,6 +61,11 @@
   text-align: center;
   text-transform: uppercase;
 
+@include horizontal {
+    left: 45px;
+    top: 60px;
+  }
+
   @include tablet {
     top: 58px;
     left: 45px;

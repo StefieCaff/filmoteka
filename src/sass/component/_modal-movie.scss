@@ -1,44 +1,4 @@
 
-//----------original backdrop styling-------------------
-// .backdrop {
-//   position: fixed;
-//   overflow: scroll;
-//   top: 0;
-//   z-index: 999;
-//   background: rgba(0, 0, 0, 0.56);
-//   width: 100vw;
-//   height: 100vh;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
-// }
-
-//---tried to adjust styling for mobile horizontal bug w/o absolute poitions--------
-// .modal {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   position: relative;
-//   max-width: 280px;
-//   padding: 48px 20px 40px 20px;
-//   background-color: $bg-body;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   transform: translate(-50%, -50%) scale(.9);
-//   transition: transform .5s ease-in-out;
-
-//   @include tablet {
-//       max-width: 618px;
-//       min-height: 460px;
-//       padding: 42px 28px;
-//     }
-
-//     @include minidesktop {
-//       max-width: 806px;
-//       min-height: 558px;
-//       padding: 50px 30px 40px 30px;
-//     }
-// }
-
 .backdrop.show-modal .modal {
   transform: translate(-50%, -50%) scale(1);
 }
@@ -73,6 +33,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: 100px;
   padding: 48px 20px 40px 20px;
   width: calc(100% - 30px);
   max-width: 280px;
@@ -81,11 +42,19 @@
 
   transform: translate(-50%, -50%) scale(1.1);
   transition: transform 300ms ease-in-out;
+  
+  @include horizontal{
+    max-width: 570px;
+    min-height: 460px;
+    padding: 40px 28px 30px 28px;
+    margin-top: 110px;
+  }
 
   @include tablet {
     max-width: 618px;
     min-height: 460px;
     padding: 42px 28px;
+    margin-top: 40px;
   }
 
   @include minidesktop {
@@ -99,6 +68,10 @@
   display: flex;
   flex-direction: column;
   
+@include horizontal{
+max-width: 264px;
+  }
+
   @include tablet{
    max-width: 264px; 
   }
@@ -142,6 +115,11 @@
 .modal__content {
   display: flex;
   flex-direction: column;
+
+  @include horizontal{
+  flex-direction: row;
+    }
+
   @include tablet {
     flex-direction: row;
   }
@@ -167,6 +145,13 @@
   width: 100%;
   border-radius: 5px;
   margin: 0 0 32px 0;
+
+@include horizontal{
+  height: 100%;
+    width: 264px;
+    height: 374px;
+    margin: 0 32px 0 0;
+  }
 
   @include tablet {
     height: 100%;
