@@ -1,12 +1,12 @@
 .basicLightbox {
   width: 100%;
   z-index: 10;
-  min-height: 500px;
   // padding: 50px 20px 50px 20px;
-
+  max-height: 100vh;
   @media screen and (max-width: 767px) {
     padding: 50px 20px 50px 20px;
     overflow-y: scroll;
+    min-height: 500px;
   }
 }
 
@@ -45,6 +45,7 @@
   // transform: translate(-50%, -50%);
   width: 100%;
   min-height: 500px;
+  max-height: 100vh;
 
   @include tablet {
     top: 50%;
@@ -134,7 +135,7 @@
   background-color: $bg-body;
   padding: 20px 20px 20px 20px;
   width: 100%;
-min-height: 500px;
+  min-height: 500px;
   @include tablet {
     flex-direction: row;
     align-items: start;

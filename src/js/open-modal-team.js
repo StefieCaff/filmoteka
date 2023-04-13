@@ -4,7 +4,6 @@ import Angelina from '../images/team/Angelina.jpg';
 import Duma from '../images/team/Duma.jpg';
 
 import { refs } from './refs';
-// console.log(refs.link);
 
 const objects = [
   {
@@ -126,6 +125,7 @@ export function openModalTeam(event) {
 
   modalClose.addEventListener('click', event => {
     modalTeam.close();
+    body.style.overflow = 'scroll';
   });
   window.addEventListener('keydown', closeModalTeam);
   window.addEventListener('click', clickOutsideModal);
@@ -136,6 +136,7 @@ export function openModalTeam(event) {
     }
 
     modalTeam.close();
+    body.style.overflow = 'scroll';
     window.removeEventListener('keydown', closeModalTeam);
   }
 
