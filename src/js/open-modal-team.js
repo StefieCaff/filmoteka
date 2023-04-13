@@ -69,7 +69,7 @@ const markup =
               />
               <div class="team__item-data">
                 <p class="team__item-name">Angelina Andronov</p>
-                <p class="team__item-role">Main Developer</p>
+                <p class="team__item-role">Lead Developer</p>
                 <div class="team__item-wrap">
                   <a
                     href="https://github.com/andangelina"
@@ -93,7 +93,7 @@ const markup =
               />
               <div class="team__item-data">
                 <p class="team__item-name">Duma Caffarel</p>
-                <p class="team__item-role">Developer</p>
+                <p class="team__item-role">Jr.Developer</p>
                 <div class="team__item-wrap">
                   <a href="https://github.com/StefieCaff" target="_blank"  title="Link to Git Hub">
                     <img
