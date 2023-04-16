@@ -1,6 +1,8 @@
 // Main Colors
 $color-accent: #ff6b01;
 $color-accent-secondary: #ff001b;
+$primaryAccent: #FF6B08;
+$secondaryAccent: #FF001B;
 
 // Texts
 $color-text: #000000;
@@ -16,6 +18,9 @@ $accent-secondary-border: $color-accent-secondary;
 // Backgrounds
 $bg-body: #ffffff;
 $bg-footer: #f7f7f7;
+$primaryBackgroundColor: #FFFFFF;
+$headerBackground: rgba(0, 0, 0, 0.56);
+$footerBackground: #F7F7F7;
 
 // Dark theme
 $bg-body-dark: #272e36;
@@ -25,7 +30,12 @@ $bg-footer-dark: #2d3640;
 $font-stack: 'Roboto', sans-serif; // User Font Family
 $font-size: 12px; // Body Font Size
 $line-height: 1.33; // Document Line Height
+$secondaryText: #000000;
+$primaryText: #ffffff;
+$footerText: #545454;
+$modalSecondary: #8C8C8C;
 
 // Transitions
 $transition-duration: .9s;
 $transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
+
