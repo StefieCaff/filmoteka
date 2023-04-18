@@ -15,8 +15,6 @@ import { IMAGE_URL } from './API/api-params';
 
 import { refs } from './refs';
 
-//refs.libraryGallery.addEventListener('click', onLibraryGallery);
-
 let idMovie;
 let currentMovie;
 

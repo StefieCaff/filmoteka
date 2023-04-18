@@ -5,6 +5,15 @@
   right: 45px;
   z-index: 99;
   
+@include bigmobile {
+    bottom: 150px;
+    right: 25px;
+  }
+
+  @include minihorizontal {
+    right: 45px;
+  }
+
   @include tablet {
     bottom: 150px;
   }
@@ -51,34 +60,3 @@
   }
 }
 
-
-
-// @include bigmobile {
-//   .btn-up-wrapper {
-    // right: 19.5;
-//     &__text{
-//       color: $color-accent;
-//       //text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
-//         &:hover,
-//         &:focus {
-//           text-shadow: -.5px -.5px 0 $color-text-light, .5px -.5px 0 $color-text-light, -.5px .5px 0 $color-text-light, .5px .5px 0 $color-text-light;
-//          // color: $color-text-light;
-      
-//     }
-//   }
-//     &__btn{
-//       //border: 1px solid $color-accent;
-//       background-color: transparent;
-//       //background-image: url(../images/popcorn.png);
-//       //background-position: center;
-//       //background-size: contain;
-//       transition: background-color .9s, box-shadow .9s;
-    
-//     &:hover,
-//     &:focus {
-//       background-color: $color-accent;
-//       box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
-//     }
-//   }
-//   }
-// }
