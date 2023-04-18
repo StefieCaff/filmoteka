@@ -48,10 +48,9 @@
   top: 63px;
   left: 35px;
   width: 130px;
-  height: 44px;
+  height: 30px;
   background-color: $color-accent;
   opacity: 0.7;
-
   border: 1px solid $color-border;
   border-radius: 5px;
   transition: opacity $transition-duration, box-shadow $transition-duration;
@@ -70,7 +69,6 @@
     top: 58px;
     left: 45px;
     width: 130px;
-    height: 44px;
     @include font($font-size, $line-height, 500);
   }
   @include minidesktop {
@@ -105,20 +103,17 @@
 
 .watch-trailer-btn-gallery {
   position: absolute;
+  z-index: 1;
   top: 15px;
   left: 15px;
   width: 130px;
-  height: 44px;
-  @include font($font-size, $line-height, 500);
-
+  height: 30px;
+  @include font(12px, $line-height, 500);
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-
-  //filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
   background-color: $color-accent;
   opacity: 0.7;
-
   border: 1px solid $color-border;
   border-radius: 5px;
   transition: opacity $transition-duration, box-shadow $transition-duration;

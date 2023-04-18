@@ -79,6 +79,12 @@
 
 }
 
+@mixin minihorizontal {
+    @media screen and (min-width: 500px) {
+        @content;
+    }
+}
+
 @mixin horizontal {
     @media screen and (min-width: 650px) {
         @content;

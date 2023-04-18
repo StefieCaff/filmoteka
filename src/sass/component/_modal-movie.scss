@@ -58,7 +58,7 @@
   }
 
   @include minidesktop {
-    max-width: 882px;
+    max-width: 750px;
     min-height: 558px;
     padding: 50px 30px 40px 30px;
   }
@@ -77,33 +77,33 @@ max-width: 264px;
   }
 
     @include minidesktop {
-      max-width: 396px;
+      max-width: 325px;
     }
   
 }
 
 .modal-close {
   position: absolute;
-  top: 10;
-  right: 10;
+  top: 15;
+  right: 15;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   fill: currentColor;
   background-color: transparent;
-  border: none;
+  border: transparent;
+  border-radius: 5px;
  }
 
 .modal-close__icon {
-  transition: fill .9s, box-shadow .9s, background-color .9s, border .2s;
+  transition: color .9s, box-shadow .9s, background-color .9s, border .2s;
   border-radius: 5px;
     &:hover,
     &:focus {
-      border: .5px solid $color-text-lighter;
-      fill: $color-text-lighter;
-      background-color: $color-accent;
+      transform: scale(1.1);
       box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+      color: $color-accent;
     }
 }
 .show-modal {
@@ -160,7 +160,7 @@ max-width: 264px;
     margin: 0 32px 0 0;
   }
   @include minidesktop {
-    width: 396px;
+    width: 325px;
     height: 477px;
     margin: 0 30px 0 0;
   }

@@ -26,15 +26,16 @@ spinnerPlay();
 
 /// ending spinner when loading
 window.addEventListener('load', function (e) {
-  spinnerStop();
- 
+  spinnerStop(); 
 });
 
 // trigger up button on scroll
 window.addEventListener('scroll', scrollFunction);
 
 
-// switch home and library headers and gallery
+/*switch home and library headers and gallery*/
+
+//click to home
 refs.homeLink.addEventListener('click', (e) => {
   e.preventDefault();
   showHome();
@@ -42,11 +43,13 @@ refs.homeLink.addEventListener('click', (e) => {
   renderTrendingMovies();
 });
 
+//click to library
 refs.libraryLinkHeader.addEventListener('click', (e) => {
   e.preventDefault();
   showLibrary();
   clearHTML(refs.galleryMovies);
   loadWatchedMoviesFromLocalStorage();
+  window.addEventListener('load', loadWatchedMoviesFromLocalStorage);
 });
 
 // trailers on load
