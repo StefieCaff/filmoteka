@@ -44,7 +44,8 @@ export function createMarkup({
               voteAverage.toFixed(1) ? voteAverage.toFixed(1) : '---'
             }</p>
            <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden" data-id=${id} >Watch the trailer</button>
-          <img
+          <div class="poster__wrap">
+           <img
             data-id="${id}"
             src="${
               posterPath
@@ -55,6 +56,7 @@ export function createMarkup({
             class="frame__poster"
             loading="lazy"
           />
+          </div>
             </div>
           <div class="frame__info" data-id=${id}>
             <p class="frame__title" data-id=${id}>${
