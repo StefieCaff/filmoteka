@@ -1,5 +1,4 @@
 import { refs } from './refs';
-import { clearHTML } from './supportFunctions';
 
 const currentHome = document.querySelector('.current-home')
 const currentLibrary = document.querySelector('.current-library');
@@ -29,10 +28,9 @@ const hideError = () => {
   refs.notification.classList.add('hidden');
 }
 
-// const activeBtn = () => {
-// const  activeBtn= document.querySelector('.button');
-//     activeBtn.classList.add('button-active');
-// }
+const activeBtn = (activeBtn) => {
+    activeBtn.classList.add('button-active');
+}
 
 // const inactiveBtn = () => {
 // const  activeBtn= document.querySelector('.button');
@@ -41,4 +39,4 @@ const hideError = () => {
 
 
 
-export { showHome, showLibrary, showError, hideError };
+export { showHome, showLibrary, showError, hideError, activeBtn };

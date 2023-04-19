@@ -18,9 +18,10 @@ export let localQueueMovies;
 
 export function onOpenQueueLibrary() {
   refs.btnLibraryQueue.classList.add('library__btn--active');
+  refs.btnLibraryQueue.classList.add('button-active')
+  
   refs.btnLibraryWatched.classList.remove('library__btn--active');
   refs.btnLibraryWatched.classList.remove('button-active')
-  refs.btnLibraryQueue.classList.add('button-active')
   const paginationBox = document.querySelector('.pagination-library-container');
   localQueueMovies = loadFromLocalStorage(KEY_QUEUE_MOVIES);
 
@@ -32,7 +33,7 @@ export function onOpenQueueLibrary() {
   } else {
     pagination(Object.keys(localQueueMovies).length, 1);
     const moviesArray = Object.values(localQueueMovies);
-    //console.log(window.innerWidth);
+    
     let moviesToRender = '';
     if (window.innerWidth >= 1280) {
       moviesToRender = moviesArray.slice(0, 9);

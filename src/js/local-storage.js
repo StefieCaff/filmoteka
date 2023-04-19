@@ -1,3 +1,6 @@
+import { onOpenQueueLibrary } from "./queue-library";
+import { loadQueueMoviesFromLocalStorage, loadWatchedMoviesFromLocalStorage, onOpenWatchedLibrary } from "./watched-library";
+
 const KEY_WATCHED_MOVIES = 'watchedMovies';
 const KEY_QUEUE_MOVIES = 'queueMovies';
 
@@ -37,6 +40,7 @@ function checkLocalStorageWatchedMovies(btn, selectedMovie) {
   }
 
   saveToLocalStorage(KEY_WATCHED_MOVIES, localWatchedMovies);
+  onOpenWatchedLibrary();
 }
 
 function checkLocalStorageQueueMovies(btn, selectedMovie) {
@@ -57,6 +61,7 @@ function checkLocalStorageQueueMovies(btn, selectedMovie) {
   }
 
   saveToLocalStorage(KEY_QUEUE_MOVIES, localQueueMovies);
+  onOpenQueueLibrary();
 }
 
 export {
