@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import pagination from './paginationLocalStorage';
+import localPagination from './paginationLocalStorage';
 
 import { loadFromLocalStorage } from './local-storage';
 import {
@@ -31,7 +31,7 @@ export function onOpenQueueLibrary() {
     refs.libraryGallery.innerHTML = markupNothing;
     paginationBox.innerHTML = '';
   } else {
-    pagination(Object.keys(localQueueMovies).length, 1);
+    localPagination(Object.keys(localQueueMovies).length, 1);
     const moviesArray = Object.values(localQueueMovies);
     
     let moviesToRender = '';
