@@ -55,6 +55,7 @@ refs.libraryLinkHeader.addEventListener('click', (e) => {
   loadWatchedMoviesFromLocalStorage();
   galleryPaginationBox.classList.add('hidden');
   paginationBox.classList.remove('hidden');
+  let globalCurrentpage = 0;
 });
 
 // trailers on load

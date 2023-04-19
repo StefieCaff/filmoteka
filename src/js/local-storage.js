@@ -40,7 +40,6 @@ function checkLocalStorageWatchedMovies(btn, selectedMovie) {
   }
 
   saveToLocalStorage(KEY_WATCHED_MOVIES, localWatchedMovies);
-  onOpenWatchedLibrary();
 }
 
 function checkLocalStorageQueueMovies(btn, selectedMovie) {
@@ -59,9 +58,8 @@ function checkLocalStorageQueueMovies(btn, selectedMovie) {
     localQueueMovies[selectedMovie.id] = selectedMovie;
     btn.textContent = 'REMOVE FROM QUEUE';
   }
-
   saveToLocalStorage(KEY_QUEUE_MOVIES, localQueueMovies);
-  onOpenQueueLibrary();
+
 }
 
 export {
