@@ -10,11 +10,9 @@ import {
 } from './watched-library';
 import { renderTrailerBtn } from './API/get-movie-trailer';
 
-export const paginationBox = document.querySelector(
-  '.pagination-library-container'
-);
+const paginationBox = document.querySelector('.pagination-library-container');
 
-paginationBox.addEventListener('click', handlerPagination);
+paginationBox.addEventListener('click', handlerLocalPagination);
 
 let globalCurrentpage = 0;
 /**
@@ -25,7 +23,7 @@ let globalCurrentpage = 0;
  */
 let allPages = 1;
 
-export default function pagination(allQueueMovies, currentPage) {
+export default function localPagination(allQueueMovies, currentPage) {
   if (window.innerWidth >= 1280) {
     allPages = Math.ceil(allQueueMovies / 9);
   }
@@ -82,7 +80,7 @@ export default function pagination(allQueueMovies, currentPage) {
 
 let currentPage = 1;
 
-function handlerPagination(evt) {
+function handlerLocalPagination(evt) {
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
   }
@@ -111,7 +109,7 @@ function handlerPagination(evt) {
     }
   }
 
-  pagination(Object.keys(localMovies).length, page);
+  localPagination(Object.keys(localMovies).length, page);
 
   if (!localMovies || !Object.keys(localMovies).length) {
     const markupNothing = createMarkupWhenLocalStorageEmpty();

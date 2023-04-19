@@ -1,11 +1,11 @@
 import { getTrendingMovies, createMarkup } from './API/get-trending';
 import { getSearchMovies } from './API/search-movies';
 import { refs } from './refs';
-import { handlerPaginationLocal } from './paginationLocalStorage';
+//import { handlerLocalPagination } from './paginationLocalStorage';
 
-const paginationBox = document.querySelector('.pagination-library-container');
+const galleryPaginationBox = document.querySelector('.pagination-gallery-container');
 
-paginationBox.addEventListener('click', handlerPagination);
+galleryPaginationBox.addEventListener('click', handlerPagination);
 
 let globalCurrentpage = 0;
 
@@ -63,7 +63,7 @@ export default function pagination(currentPage, allPages) {
     markup += `<li class="pagination-button-arrow">></li>`;
   }
 
-  paginationBox.innerHTML = markup;
+  galleryPaginationBox.innerHTML = markup;
 }
 
 function handlerPagination(evt) {
