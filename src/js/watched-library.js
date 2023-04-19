@@ -6,7 +6,7 @@ import {
 } from './local-storage';
 import { refs } from './refs';
 import { renderBtn } from './API/get-movie-trailer';
-import pagination from './paginationLocalStorage';
+import localPagination from './paginationLocalStorage';
 import { paginationBox } from './paginationLocalStorage';
 
 export const NOTHING_IMG =
@@ -31,7 +31,7 @@ export function onOpenWatchedLibrary() {
     paginationBox.innerHTML = '';
     refs.libraryGallery.innerHTML = markupNothing;
   } else {
-    pagination(Object.keys(moviesFromLocalStorage).length, 1);
+    localPagination(Object.keys(moviesFromLocalStorage).length, 1);
     const moviesArray = Object.values(moviesFromLocalStorage);
     let moviesToRender = '';
     if (window.innerWidth >= 1280) {

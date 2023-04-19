@@ -10,7 +10,7 @@ import {
 } from './watched-library';
 import { renderTrailerBtn } from './API/get-movie-trailer';
 
-const paginationBox = document.querySelector('.pagination-library-container');
+export const paginationBox = document.querySelector('.pagination-library-container');
 
 paginationBox.addEventListener('click', handlerLocalPagination);
 
