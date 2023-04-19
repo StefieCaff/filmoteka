@@ -18,14 +18,15 @@ if (refs.btnLibraryWatched) {
 
 export function onOpenWatchedLibrary() {
   refs.btnLibraryWatched.classList.add('library__btn--active');
+  refs.btnLibraryWatched.classList.add('button-active');
+  
   refs.btnLibraryQueue.classList.remove('library__btn--active');
-  refs.btnLibraryWatched.classList.add('button-active')
-  refs.btnLibraryQueue.classList.remove('button-active')
+  refs.btnLibraryQueue.classList.remove('button-active');
   const paginationBox = document.querySelector('.pagination-library-container');
   const moviesFromLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
 
   if (!moviesFromLocalStorage || !Object.keys(moviesFromLocalStorage).length) {
-    //console.log(paginationBox);
+    
     const markupNothing = createMarkupWhenLocalStorageEmpty();
     paginationBox.innerHTML = '';
     refs.libraryGallery.innerHTML = markupNothing;
@@ -151,7 +152,6 @@ export function loadQueueMoviesFromLocalStorage() {
     const markup = moviesToRender.map(createMarkupWatchedMovies).join('');
     if (refs.libraryGallery) {
       refs.libraryGallery.innerHTML = markup;
-
       renderBtn();
     }
   }
