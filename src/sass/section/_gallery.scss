@@ -54,7 +54,7 @@
   transition-timing-function: $transition-animation;
 &:hover,
   &:focus {
-    transform: scale(1.01);
+    transform: scale(1.09);
   }
 
   @include bigmobile {
@@ -74,6 +74,10 @@
     height: 574px;
     width: 320px;;
   }
+}
+
+.poster__wrap{
+  overflow: hidden;
 }
 
 .frame__title {

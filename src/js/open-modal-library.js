@@ -132,5 +132,5 @@ export function createMarkupModal({
               </div>
                <button type="button" aria-label="watch the trailer" class="watch-trailer-btn-gallery is-hidden " data-id=${id} >Watch the trailer</button>
           </div>
-          `;
+       `;
 }
