@@ -52,7 +52,7 @@
   transition-property:transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-animation;
-&:hover,
+  &:hover,
   &:focus {
     transform: scale(1.09);
   }
