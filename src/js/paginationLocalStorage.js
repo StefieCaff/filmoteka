@@ -81,6 +81,8 @@ export default function localPagination(allQueueMovies, currentPage) {
 let currentPage = 1;
 
 function handlerLocalPagination(evt) {
+  console.log(allPages);
+  console.log(currentPage, "current");
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
   }

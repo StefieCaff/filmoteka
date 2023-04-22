@@ -14,7 +14,7 @@ export const NOTHING_IMG =
 
 if (refs.btnLibraryWatched) {
   refs.btnLibraryWatched.addEventListener('click', onOpenWatchedLibrary);
-}
+};
 
 export function onOpenWatchedLibrary() {
   refs.btnLibraryWatched.classList.add('library__btn--active');
@@ -49,7 +49,7 @@ export function onOpenWatchedLibrary() {
 
     renderBtn();
   }
-}
+};
 
 export function createMarkupWatchedMovies({
   id,
@@ -91,7 +91,7 @@ export function createMarkupWatchedMovies({
               </p>
             </div>
           </li>`;
-}
+};
 
 export function concatGenres(arrOfGenresName) {
   return arrOfGenresName.reduce((acc, genre, index, arr) => {
@@ -103,7 +103,7 @@ export function concatGenres(arrOfGenresName) {
 
     return acc;
   }, '');
-}
+};
 
 export function createMarkupWhenLocalStorageEmpty() {
   return `
@@ -125,7 +125,7 @@ export function createMarkupWhenLocalStorageEmpty() {
     </div>
 </li>
     `;
-}
+};
 
 export function loadWatchedMoviesFromLocalStorage() {
   const moviesFromLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
@@ -137,7 +137,7 @@ export function loadWatchedMoviesFromLocalStorage() {
   } else {
     onOpenWatchedLibrary();
   }
-}
+};
 
 export function loadQueueMoviesFromLocalStorage() {
   const queueFromLocalStorage = loadFromLocalStorage(KEY_QUEUE_MOVIES);
@@ -155,4 +155,4 @@ export function loadQueueMoviesFromLocalStorage() {
       renderBtn();
     }
   }
-}
+};
