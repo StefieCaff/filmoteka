@@ -11,7 +11,7 @@ function loadFromLocalStorage(key) {
   } catch (error) {
     console.error('Get state error: ', error.message);
   }
-}
+};
 
 function saveToLocalStorage(key, value) {
   try {
@@ -20,7 +20,7 @@ function saveToLocalStorage(key, value) {
   } catch (error) {
     console.error('Set state error: ', error.message);
   }
-}
+};
 
 function checkLocalStorageWatchedMovies(btn, selectedMovie) {
   let localWatchedMovies = loadFromLocalStorage(KEY_WATCHED_MOVIES);
@@ -40,7 +40,8 @@ function checkLocalStorageWatchedMovies(btn, selectedMovie) {
   }
 
   saveToLocalStorage(KEY_WATCHED_MOVIES, localWatchedMovies);
-}
+
+};
 
 function checkLocalStorageQueueMovies(btn, selectedMovie) {
   let localQueueMovies = loadFromLocalStorage(KEY_QUEUE_MOVIES);
@@ -59,8 +60,8 @@ function checkLocalStorageQueueMovies(btn, selectedMovie) {
     btn.textContent = 'REMOVE FROM QUEUE';
   }
   saveToLocalStorage(KEY_QUEUE_MOVIES, localQueueMovies);
-
-}
+  
+};
 
 export {
   KEY_WATCHED_MOVIES,

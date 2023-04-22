@@ -42,9 +42,11 @@ refs.homeLink.addEventListener('click', (e) => {
   e.preventDefault();
   showHome();
   clearHTML(refs.galleryMovies);
+  refs.libraryLinkHeader.classList.remove('active-library');
   renderTrendingMovies();
   galleryPaginationBox.classList.remove('hidden');
   paginationBox.classList.add('hidden');
+  window.location.reload();
 });
 
 //click to library
@@ -53,9 +55,9 @@ refs.libraryLinkHeader.addEventListener('click', (e) => {
   showLibrary();
   clearHTML(refs.galleryMovies);
   loadWatchedMoviesFromLocalStorage();
+  refs.libraryLinkHeader.classList.add('active-library');
   galleryPaginationBox.classList.add('hidden');
   paginationBox.classList.remove('hidden');
-  let globalCurrentpage = 0;
 });
 
 // trailers on load
