@@ -10,6 +10,8 @@ import {
 } from './watched-library';
 import { renderTrailerBtn } from './API/get-movie-trailer';
 
+
+
 export const paginationBox = document.querySelector('.pagination-library-container');
 
 paginationBox.addEventListener('click', handlerLocalPagination);
@@ -24,7 +26,7 @@ let globalCurrentpage = 0;
 let allPages = 1;
 
 export default function localPagination(allQueueMovies, currentPage) {
-  
+ 
   if (window.innerWidth >= 1280) {
     allPages = Math.ceil(allQueueMovies / 9);
   }
@@ -77,14 +79,15 @@ export default function localPagination(allQueueMovies, currentPage) {
   }
 
   paginationBox.innerHTML = markup;
-}
+};
 
 let currentPage = 1;
 
-function handlerLocalPagination(evt) {
-  console.log(allPages, "all");
-  console.log(currentPage, "current");
-
+export function handlerLocalPagination(evt) {
+  const resetPage = () => currentPage = 1
+  refs.btnLibraryQueue.addEventListener('click', resetPage);
+  refs.btnLibraryWatched.addEventListener('click', resetPage);
+  
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
   }
@@ -94,7 +97,7 @@ function handlerLocalPagination(evt) {
   if (evt.target.textContent === '...') {
     return;
   }
-  
+ 
   if (evt.target.textContent === '>' && currentPage < allPages) {
     currentPage += 1;
   } else if (evt.target.textContent === '<' && currentPage !== 1) {
@@ -102,8 +105,9 @@ function handlerLocalPagination(evt) {
   } else {
     currentPage = Number(evt.target.textContent);
   }
+
   const page = currentPage;
-  console.log(page, "page");
+  
   let localMovies;
   if (refs.btnLibraryQueue) {
     if (refs.btnLibraryQueue.classList.contains('library__btn--active')) {
@@ -153,4 +157,4 @@ function handlerLocalPagination(evt) {
       });
     }
   }
-}
+};
