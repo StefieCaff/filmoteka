@@ -84,9 +84,9 @@ export default function localPagination(allQueueMovies, currentPage) {
 let currentPage = 1;
 
 export function handlerLocalPagination(evt) {
-  const resetPage = () => currentPage = 1
-  refs.btnLibraryQueue.addEventListener('click', resetPage);
-  refs.btnLibraryWatched.addEventListener('click', resetPage);
+  const resetCurrentPage = () => currentPage = 1
+  refs.btnLibraryQueue.addEventListener('click', resetCurrentPage);
+  refs.btnLibraryWatched.addEventListener('click', resetCurrentPage);
   
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
