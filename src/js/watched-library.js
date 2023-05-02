@@ -24,6 +24,7 @@ export function onOpenWatchedLibrary() {
   refs.btnLibraryQueue.classList.remove('button-active');
   const paginationBox = document.querySelector('.pagination-library-container');
   const moviesFromLocalStorage = loadFromLocalStorage(KEY_WATCHED_MOVIES);
+  
 
   if (!moviesFromLocalStorage || !Object.keys(moviesFromLocalStorage).length) {
     

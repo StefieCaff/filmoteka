@@ -1,31 +1,26 @@
 
 import { spinnerPlay, spinnerStop } from './js/spinner';
 import { scrollFunction } from './js/button-up';
-
 import { openModalTeam } from './js/open-modal-team';
-
 import { onClickBtnWatchGallery } from './js/API/get-movie-trailer';
 import { renderTrendingMovies } from './js/API/get-trending';
-import { handlerPagination } from './js/pagination';
-import { handlerLocalPagination } from './js/paginationLocalStorage';
 import './js/open-modal-library';
 import './js/gallery';
-
-import { /*onOpenWatchedLibrary,*/ loadWatchedMoviesFromLocalStorage } from './js/watched-library';
-// import { onOpenQueueLibrary } from './js/queue-library';
-
+import { loadWatchedMoviesFromLocalStorage } from './js/watched-library';
 import { showHome, showLibrary } from './js/show-elements-s';
 import { refs } from './js/refs'
 import { clearHTML } from './js/supportFunctions';
 
 const galleryPaginationBox = document.querySelector('.pagination-gallery-container');
 const paginationBox = document.querySelector('.pagination-library-container');
+
+
 // launch spinner and trending movies on page load
 spinnerPlay();
 
 //-----------------event listeners----------------------
 
-/// ending spinner when loading
+// ending spinner when loading
 window.addEventListener('load', function (e) {
   spinnerStop(); 
 });
@@ -34,8 +29,9 @@ window.addEventListener('load', function (e) {
 window.addEventListener('scroll', scrollFunction);
 
 
-
-/*switch home and library headers and gallery*/
+/*
+******** switch home and library headers and gallery ******
+*/
 
 //click to home
 refs.homeLink.addEventListener('click', (e) => {
