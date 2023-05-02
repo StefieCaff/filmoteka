@@ -24,6 +24,7 @@ let globalCurrentpage = 0;
 let allPages = 1;
 
 export default function localPagination(allQueueMovies, currentPage) {
+  
   if (window.innerWidth >= 1280) {
     allPages = Math.ceil(allQueueMovies / 9);
   }
@@ -81,8 +82,9 @@ export default function localPagination(allQueueMovies, currentPage) {
 let currentPage = 1;
 
 function handlerLocalPagination(evt) {
-  console.log(allPages);
+  console.log(allPages, "all");
   console.log(currentPage, "current");
+
   if (!refs.btnLibraryQueue && !refs.btnLibraryWatched) {
     return;
   }
@@ -92,7 +94,7 @@ function handlerLocalPagination(evt) {
   if (evt.target.textContent === '...') {
     return;
   }
-
+  
   if (evt.target.textContent === '>' && currentPage < allPages) {
     currentPage += 1;
   } else if (evt.target.textContent === '<' && currentPage !== 1) {
@@ -101,7 +103,7 @@ function handlerLocalPagination(evt) {
     currentPage = Number(evt.target.textContent);
   }
   const page = currentPage;
-
+  console.log(page, "page");
   let localMovies;
   if (refs.btnLibraryQueue) {
     if (refs.btnLibraryQueue.classList.contains('library__btn--active')) {
