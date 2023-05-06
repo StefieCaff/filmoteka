@@ -126,3 +126,33 @@
   text-transform: uppercase;
   @include font(18px, 1.5, 500);
 }
+
+/* NOTHING In Local Storgae PAGE*/
+
+.container-nothing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+    margin-left: 33%;
+
+    @include tablet{
+      margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+  .container-nothing {
+    margin-left: 12%;
+    margin-top: 40px;
+  }
+}
+
+.container-nothing__img{
+  display: flex;
+
+}
+
+.container-nothing__link {
+  color: $color-accent;
+}
