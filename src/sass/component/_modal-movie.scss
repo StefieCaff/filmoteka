@@ -97,7 +97,7 @@ max-width: 264px;
  }
 
 .modal-close__icon {
-  transition: color .9s, box-shadow .9s, background-color .9s, border .2s;
+  transition: transform .9s, color .9s, box-shadow .9s, background-color .9s, border .2s;
   border-radius: 5px;
     &:hover,
     &:focus {
